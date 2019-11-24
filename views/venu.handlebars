@@ -3,11 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact Information</title>
-</head>
-<body>
-    <h1>{{venu}}</h1>asdsadasd
+    <link rel="stylesheet" href="bootstrap-4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/main.js"></script>
+    <title>Home</title>
+    <style>
+  input[type='radio'] {
+  display: none;
+}
 
+.checkboxLabel:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0 5px 0 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 11px;
+  border: 2px solid #FF9A00;
+  background-color: transparent;
+}
+
+input[type='radio']:checked+.checkboxLabel:before {
+  position: relative;
+  border: 2px solid #FF9A00;
+  border-radius: 11px;
+  width: 17px;
+  height: 17px;
+  top: 5px;
+  content: " ";
+  display: inline-block;
+  background-color: #FF9A00;
+}
+    </style>
+</head>
+<body id="homeBg" >
+
+{{venu}}
 </body>
-</html>

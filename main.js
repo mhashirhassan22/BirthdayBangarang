@@ -33,6 +33,21 @@ app.get('/venu/:name',(req,res)=>{
       res.render('venu',{venu:req.params.name})
 
 });
+
+app.get('/selectTheme',(req,res)=>{
+
+     res.render('selectTheme')
+});
+app.get('/themeSelected',(req,res)=>{
+
+       res.render('themeSelected')
+});
+app.get('/payment',(req,res)=>{
+
+
+     res.render('payment')
+});
+
 app.use('/',require('./routes/Authentication'))
 
  //static folder
