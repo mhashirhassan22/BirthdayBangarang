@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <link rel="stylesheet" href="bootstrap-4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <script src="js/colorpalettepicker.js"></script>
+    
+    <title>Themes</title>
+    <style>
+            input[type='radio'] {
+            display: none;
+          }
+          
+          .checkboxLabel:before {
+            content: " ";
+            display: inline-block;
+            position: relative;
+            top: 5px;
+            margin: 0 5px 0 0;
+            width: 17px;
+            height: 17px;
+            border-radius: 11px;
+            border: 2px solid #FF9A00;
+            background-color: transparent;
+          }
+          
+          input[type='radio']:checked+.checkboxLabel:before {
+            position: relative;
+            border: 2px solid #FF9A00;
+            border-radius: 11px;
+            width: 17px;
+            height: 17px;
+            top: 5px;
+            content: " ";
+            display: inline-block;
+            background-color: #FF9A00;
+          }
+              </style>
+</head>
+<body id="themeBg">
+        
+<!--nav-->
+<nav class="navbar navbar-expand-xl navbar-light mynav">
+        <div class="">
+        <a class="navbar-brand" href="#"><h4>Bangarang <span id="birthdays"> Birthdays</span></h4></a>
+        </div>
+        <button class="navbar-toggler ml-auto"  type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Resources <span> | </span></a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Direct Link <span> | </span></a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Booked Parties <span> | </span></a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Schedule <span> | </span></a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Themes</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="font-weight: bold; color:#00C4FF">Username</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#"><i class="fas fa-sign-in-alt" style="font-size: 16px;color: #00C4FF"></i></a> 
+                </li>
+              
+            </ul>
+        </div>
+    </nav>
+    <!--theme header-->
+    <div class="container ">
+            <div class="row mt-5">
+                <div class="col-12 col-lg-4 col-xl-3 mb-2 text-center back">
+                <a href="#" class="backbtn" style="padding: 7px 20px"><i class="fas fa-chevron-left" style="margin-right: 10px ; "></i>    Cancel</a>
+                </div>
+                <div class="col-12 col-lg-5 col-xl-6 venue ">
+                    <h4 class="title">Themes Editor</h4>
+                   
+                </div>
+            </div>
+            <hr>
+    </div>
+    <!--form-->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-6 col-lg-6 col-md-6 ">
+            <form action="">
+                <div class="form-group text-center">
+                <label for="exampleInputPassword1">Name</label>
+                <input type="text" class="form-control text-center" id="exampleInputPassword1" placeholder="Ninja Turtle">
+                </div>
+               
+                <div class="form-group text-center  ">
+                    <label for="exampleInputPassword1" >Image</label>
+                    <div class="row justify-content-center">
+                        <div class=" Cards col-4">
+                        <img src="images/img1.png" class="w-100" alt="">
+                            <div class="card-img-overlay" style="margin-top: -15px;">
+                             <a href="#"> <img src="images/del.png" alt="" style="width: 25px; float: left;"></a>
+                            </div>
+                        </div>
+                        <div class="Cards col-4">
+                        <img src="images/img1.png" class="w-100" alt="">
+                            <div class="card-img-overlay" style="margin-top: -15px;">
+                             <a href="#"> <img src="images/del.png" alt=""  style="width: 25px; float: left;"></a>
+                            </div>
+                         </div>
+                        <div class="Cards col-4">
+                        <label for="image">
+                            <input type="file" name="image" id="image" style="display:none;"/>
+                            <img src="images/uploadbtn.png" class="w-100" alt="">
+                        </label>  
+                        </div>
+                    </div>
+                </div>
+                
+               
+                <div class="form-group text-center">
+                <label for="exampleInputPassword1">Price</label>
+                <input type="text" class="form-control text-center" id="exampleInputPassword1" placeholder="199$ / day">
+                </div>
+                <div class="form-group text-center">
+                <label for="exampleInputPassword1">Length</label>
+                <input type="text" class="form-control text-center" id="exampleInputPassword1" placeholder="90 minutes">
+                </div>
+                <div class="form-group text-center">
+                <label for="exampleInputPassword1">Cancellation</label>
+                <input type="text" class="form-control text-center" id="exampleInputPassword1" placeholder="3 days prior">
+                </div>
+                <div class="form-group text-center">
+                <label for="exampleInputPassword1">Included</label>
+                <textarea   class="form-control text-center textarea " rows="3" id="comment" placeholder="Hosted party with obstacles, referee,all nerf darts provided. Includes drinks,plates, forks, decorations."></textarea>
+                </div>
+                <div class="form-group text-center">
+                <label for="exampleInputPassword1">Not Included</label>
+                <textarea   class="form-control text-center textarea" rows="2" id="comment" placeholder="Cake , party favors , Nerf Guns "></textarea>
+                </div>
+                <div class="form-group text-center">
+                <label for="exampleInputPassword1">Min Age</label>
+                <input type="text" class="form-control text-center" id="exampleInputPassword1" placeholder="13 years old">
+                </div>
+                <div class="form-group text-center">
+                <label for="exampleInputPassword1">Max Participants</label>
+                <input type="text" class="form-control text-center" id="exampleInputPassword1" placeholder="13">
+                </div>
+                <div class="form-group text-center">
+                <label for="exampleInputPassword1">Parent Waiver</label><br>
+                <div class="form-check form-check-inline radio">
+                        <input id="male" type="radio" name="gender" value="male">
+                        <label class="checkboxLabel" for="male" style="font-size: 12px; color: #FF9A00; margin-top: 2px;">Print</label>
+                        <label for="image">
+                                <input type="file" name="image" id="image" style="display:none;"/>
+                                <img src="images/uploadpdf.png" class="w-75" alt="" style="margin-right: 40px;">
+                            </label> 
+                      </div>
+                      <div class="form-check form-check-inline radio">
+                            <input id="female" type="radio" name="gender" value="female">
+                            <label class="checkboxLabel" for="female" style="font-size: 12px; color: #FF9A00; margin-top: 2px;">Sign at Location</label>
+                           
+                          </div>
+                <!--<div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">print
+                <label for="image">
+                        <input type="file" name="image" id="image" style="display:none;"/>
+                        <img src="images/uploadpdf.png" class="w-75" alt="" style="margin-right: 40px;">
+                    </label>  
+                </div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">Sign at Location
+                <label class="form-check-label" for="inlineRadio2"></label>
+                </div>-->
+                </div>
+                <div class="container">
+                        <div class="row choose">
+                          <div class="col-lg-12 text-center">
+                              <p>Party Hat Icon</p>
+                              <img src="images/ninja.png" class="mb-2" alt="">
+                                  
+                              <div id="colorpalettediv"></div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                      <div class="row justify-content-center mb-5">
+                            <a href="#" class="col-10 col-lg-6 col-xl-6 PayBook btn-block  mt-4 pt-2 pb-2" style="border-radius: 30px">UPDATE AND SAVE</a>
+                      </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('#colorpalettediv').colorPalettePicker({
+            lines:4,
+            onSelected: function(color){
+                alert(color);
+            }
+        });
+    </script>
+
+    
+    <script src="jquery/jquery-3.4.0.min.js"></script>
+    <script src="js/popper.min.js"></script> 
+    <script src="bootstrap-4/js/bootstrap.min.js"></script>  
+</body>
+</html>

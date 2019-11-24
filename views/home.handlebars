@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap-4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/main.js"></script>
+    <title>Home</title>
+    <style>
+  input[type='radio'] {
+  display: none;
+}
+
+.checkboxLabel:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0 5px 0 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 11px;
+  border: 2px solid #FF9A00;
+  background-color: transparent;
+}
+
+input[type='radio']:checked+.checkboxLabel:before {
+  position: relative;
+  border: 2px solid #FF9A00;
+  border-radius: 11px;
+  width: 17px;
+  height: 17px;
+  top: 5px;
+  content: " ";
+  display: inline-block;
+  background-color: #FF9A00;
+}
+    </style>
+</head>
+<body id="homeBg" >
+    <!--Login Form-->
+<div id="nav" class="overlay">
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <a href="#" class="close-btn" onclick="closeNav()">&times;</a>
+                <div class="fadeIn first mt-4">
+                    <h4>Host Login</h4>
+                    <p>Don't have an host account ? <a onclick="openNav2()" style="cursor: pointer;">Sign Up!</a></p>
+                </div>
+                <!-- Login Form -->
+                <form action="/signin" method="POST" class="login-form">
+                    <!--email-->
+                <input  type="text" id="login" class="fadeIn second inputPic1" name="Email" placeholder="Email">
+                <!--Password-->
+                <input  type="text" id="password" class="fadeIn third inputPic2" name="password" placeholder="Password">
+            
+                <!--Sign Up sign IN buttons-->
+                <div class="row justify-content-center">
+
+                        <div class="entry">
+                            <input type="submit" value="SignIn" href="#" class="col-10 loginBtn mt-3" style=" color: #FF8100;">
+                           
+                        </div>
+                        
+                </div>
+            </form> 
+        </div>
+    </div>
+</div>
+<!--Sign Up form-->                     
+<div id="nav2" class="overlay2">
+    <div class="wrapper fadeInDown">
+        <div id="formContent2">
+            <div class="fadeIn first mt-3">
+            <a href="#" class="close-btn" onclick="closeNav2()">&times;</a>
+            <h4>Host Account Creation</h4>
+            <p>Zero cost to sign up + zero monthly fee . You only pay a service fee when a party Is booked</p>
+            </div>
+            <form action="/signup" method="POST" class="signup-form">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-xl-6 col-lg-6 " style="padding-left: 0px !important ; padding-right: 0px !important">
+                        <p>Owner Info </p>
+                        <input  type="text" id="login" class="fadeIn second " name="login" placeholder="Login ID">
+                        <input  type="text" id="login" class="fadeIn second " name="login" placeholder="Passowrd">
+                        <input  type="text" id="login" class="fadeIn second " name="login" placeholder="Confirm Password">
+                        <input  type="text" id="login" class="fadeIn second " name="login" placeholder="Full Name">
+                        <input  type="text" id="login" class="fadeIn second " name="login" placeholder="Paypal ID">
+                        <input  type="text" id="login" class="fadeIn second " name="login" placeholder="Bank Routing #">
+                        <input  type="text" id="login" class="fadeIn second " name="login" placeholder="Checking Acct # ">
+                    </div>
+                    <div class="col-12 col-xl-6 col-lg-6" style="padding-left: 0px !important ; padding-right: 0px !important">
+                        <p>Location Info</p>
+                        <input  type="text" id="login" class="fadeIn second " name="login" placeholder="Business Name">
+                        <input  type="text" id="login" class="fadeIn second " name="login" placeholder="Address">
+                        <input  type="text" id="login" class="fadeIn second " name="login" placeholder="City / State / Zipcode">
+                        <input  type="text" id="login" class="fadeIn second " name="login" placeholder="Phone #">
+                        <input  type="text" id="login" class="fadeIn second " name="login" placeholder="Email">
+                        <input  type="text" id="login" class="fadeIn second " name="login" placeholder="Website">
+                        <input  type="text" id="login" class="fadeIn second " name="login" placeholder="Booking Service Fee: $10">
+                    </div>
+                    <div class="col-12 form-check ">
+                            <div class="radio">
+                                    <input id="terms" type="radio" name="services" value="terms">
+                                    <label class="checkboxLabel" for="terms" style="font-size: 12px; color: #FF9A00; margin-top: 2px;">I agree to <span style="color: #FF9A00;text-decoration:underline">Term of Services</span></label>
+                                   
+                                  </div>
+                    </div>
+                    <input type="submit" value="SIGN UP" href="#"class="col-11 loginBtn mt-1" style=" color: #FF8100;">
+                </div>
+            </form> 
+        </div>
+    </div>
+</div>
+<!--nav-->
+<nav class="navbar navbar-expand-md navbar-light bg-md-light"  >
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#"><h4>Bangarang Birthdays</h4></a>
+    </div>
+    <button class="navbar-toggler ml-auto"  type="button"  data-toggle="collapse" data-target="#navbarResponsive">
+    <span class="navbar-toggler-icon float-right"></span>
+    </button>
+    <div class="collapse navbar-collapse  " id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/ContactUs" " >Contact Us</a>
+            </li>
+ <li class="nav-item">
+                <a class="nav-link white_btn" href="#" onclick="openNav()">Become A Host</a>
+ </li>
+
+           
+        </ul>
+    </div>
+</nav>
+    
+<!--header-->
+<div class="heading">
+    <h1>Rent a birthday party venue</h1>
+    <p>Planning & Booking your Child's Birthday Should be Easy!</p>
+</div>
+<!--How far where section-->
+<div class="container headingbtn" >
+    <div class="row justify-content-center">
+        <div class="col-10 col-xl-8 col-lg-8 col-md-8  input-group" id="WhereHow" >
+            <i class="fas fa-map-marker-alt" id="location"></i>
+             <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Where ?" id="inputID">
+            <span>|</span>
+            <i class="fas fa-car" id="car"></i>
+            <div class="input-group-append">
+                <button class="btn  dropdown-toggle" id="dropdownbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">How Far ?</button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+            </div>
+        </div> 
+            <a href="#" class="col-3 blue_btn text-center" id="search">SEARCH</a>
+    </div>
+</div>
+<!--Featured venues-->
+
+<div class="container ">
+    <div class="row">
+        <div class="col feature">
+            <img src="images/cake.png" class="mb-1 mt-4" alt="">
+            <h5>Featured Venues</h5>
+            <p>Take a look at where your child's birthday could be this year!</p>
+        </div>
+    </div>
+</div>
+<div class=" container padding ">
+    <div class="row padding">
+        <div class=" col-6 col-xl-3 col-lg-6 col-md-6">
+            <a class=" Cards" href="/venu/{{name}}">
+                <img class="card-img-top" src="images/img1.png" alt="">
+                <div class="card-img-overlay">
+                    <p class="card-text price-tag">$190</p>
+                </div>
+                <img src="images/ninja.png" alt="">
+                <label class="card-title mt-1" >Ninja Turtle</label>
+                <p class="card-text"  >Tumbling Studio</p>
+            </a>
+                    
+        </div>
+
+        <div class="col-6 col-xl-3 col-lg-6 col-md-6">
+            <div class=" Cards">
+                <img class="card-img-top" src="images/img2.png" alt="">
+                <div class="card-img-overlay">
+                     <p class="card-text price-tag">$190</p>
+                </div>
+                <div class="card-body">
+                <img src="images/princess.png" alt="">
+                <label class="card-title mt-1">Princess Party</label>
+                <p class="card-text">Skating Rink</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-xl-3 col-lg-6 col-md-6">
+            <div class=" Cards">
+                <img class="card-img-top" src="images/img3.png" alt="">
+                    <div class="card-img-overlay">
+                        <p class="card-text price-tag">$190</p>
+                    </div>
+                    <div class="card-body">
+                    <img src="images/warrior.png" alt="">
+                    <label class="card-title mt-1">Ninja Warrior</label>
+                    <p class="card-text">Pearcys Martial Arts</p>
+                    </div>
+            </div>
+        </div>
+        <div class="col-6 col-xl-3 col-lg-6 col-md-6">
+            <div class=" Cards">
+                <img class="card-img-top" src="images/img4.png" alt="">
+                    <div class="card-img-overlay">
+                        <p class="card-text price-tag">$190</p>
+                    </div>
+                    <div class="card-body">
+                    <img src="images/star.png" alt="">
+                    <label class="card-title mt-1">Star Wars</label>
+                    <p class="card-text">Skating Rink</p>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</div>
+
+        
+<!--Jquery bootstrap popper files-->
+    <script src="D:/NodeProject/app.js"></script>
+    <script src="jquery/jquery-3.4.0.min.js"></script>
+    <script src="js/popper.min.js"></script> 
+    <script src="bootstrap-4/js/bootstrap.min.js"></script>
+</body>
+</html>

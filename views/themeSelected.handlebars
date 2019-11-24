@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--calendar files-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:300,400,700'>
+    <link rel="stylesheet" href="css/style.css">
+        <!--other files-->
+    
+    <link rel="stylesheet" href="bootstrap-4/css/bootstrap.min.css">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/selectTheme.css">
+    <link rel="stylesheet" href="css/mycalender.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Theme Selected</title>
+    <style>
+            body { background-color: #fafafa; }
+            .status-default{
+                color: blueviolet !important;
+            }
+            .calendar{
+                width: 100% !important;
+                padding: 0px 10px;
+            }
+            .muted{
+                background-color: #EF4040;
+                color: rgb(255, 249, 249) !important;
+                border: none;
+            }
+           
+        </style>
+
+   
+</head>
+<body id="themeBg" >
+   <!--nav-->
+<nav class="navbar navbar-expand-md navbar-light  ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><h4>Bangarang Birthdays</h4></a>
+    </div>
+    <button class="navbar-toggler ml-auto "  type="button" data-toggle="collapse" data-target="#navbarResponsive">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link contact" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link white_btn contact" href="#">Become A Host</a>
+            </li>
+                
+        </ul>
+    </div>
+</nav>
+    
+    
+    <!--Featured venues-->
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-12 col-lg-4 col-xl-4 col-md-3 text-center " style="margin-top: 20px">
+            <a href="#" class="backbtntheme"><i class="fas fa-chevron-left" style="margin-right: 10px"></i>       Back Home</a>
+        </div>
+        <div class="col-12 col-lg-5 col-xl-5 col-md-6 venue ">
+            <p class="title" style="font-size: 13px;margin-bottom: 0px;">VENUE</p>
+            <h4 class="text-center">Tumbling Studio</h4>
+            <p class="subTitle" style="color: black;">15934 Park Ave, New York City, NY 92844<span class="seprator"> | </span>  (760)948-2233 <span  class="seprator"> | </span><span class="link">www.tublingstudio.com</span></p>
+                
+        </div>
+        <div class="col-12 col-lg-3 col-xl-3 col-md-3 text-center " style="margin-top: 20px">
+            <a href="#" class="FAQbtn"><i class="fas fa-question-circle" style="margin-right: 10px"></i>      FAQ</a>
+        </div>
+    </div>
+    <hr style="width: 78% !important" class="mb-5">
+</div>
+    <!--calendar-->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-xl-3 col-lg-4 col-md-5   text-center"  style="background-color: white;  box-shadow:10px 10px 10px rgb(214, 214, 214); ">
+            <div id="calendar" class=" "  >
+                   
+            </div>
+            <div class="container">
+                <div class="row  mt-2 text-center ">
+                    <div class="col-12">
+                        <i class="fas fa-circle red "></i> <label style="color: #EF4040; font-size: 12px;" class="mr-4">Full</label>
+                        <i class="fas fa-circle green "></i> <label style=" color: #37c64f; font-size: 12px;" class="mr-4" >Available</label>
+                        <i class="fas fa-circle blue"></i> <label style="color: #00BAFF; font-size: 12px;"class="">Selected</label>
+                        
+                    </div>
+                </div>
+            </div>      
+        </div>
+        <div class="col-12 col-lg-4 col-xl-3 col-md-5 pl-4 ">
+            <form>
+                <div class="form-row pb-2">
+                    <div class="form-group1 col-md-6 col-6">
+                        <label for="inputEmail4">Where ?</label>
+                        <input type="email" class="form-control1 col-lg-12" id="inputEmail4" placeholder="Enter City">
+                    </div>
+
+                    <div class="form-group1 col-md-6 col-6">
+                        <label for="inputPassword4">Appointment Time</label>
+                        <input type="text" class="form-control1 col-lg-12" id="inputPassword4" placeholder="Enter Time">
+                    </div>
+                </div>
+                    <div class="form-row">
+                        <div class="form-group1 col-md-12 col-12">
+                            <label for="inputState">Child Turns</label>
+                            <select id="inputState" class="form-control1 col-12">
+                              <option selected>Choose</option>
+                              <option>7 years Old</option>
+                              <option>14 years Old</option>
+                              <option>15 years Old</option>
+                            </select>
+                          </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group1 col-6 col-md-6">
+                        <label for="inputEmail4">Child Name</label>
+                        <input type="email" class="form-control1 col-lg-12" id="inputEmail4" placeholder="Child Name">
+                        </div>
+
+                        <div class="form-group1 col-6 col-md-6">
+                        <label for="inputPassword4">Parent Name</label>
+                        <input type="text" class="form-control1 col-lg-12" id="inputPassword4" placeholder="Parent Name">
+                        </div>
+                    </div>
+
+                    <div class="form-group1 ">
+                        <label for="inputAddress">Email</label>
+                        <input type="email" class="form-control1 col-lg-12" id="inputAddress" placeholder="abc@domain.com">
+                    </div>
+                    <div class="form-group1 ">
+                        <label for="inputAddress">Phone</label>
+                        <input type="text" class="form-control1 col-lg-12" id="inputAddress" placeholder="123-345677">
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-3 col-md-6 ">
+                    <div class="container" >
+                            <div class="row  justify-content-center">
+                              
+                                <div class="Cards"> 
+                                        <div class="card-body">
+                                                <img src="images/ninja.png" alt="">
+                                                <label class="card-title">Ninja Turtle</label>
+                                                <a href="#" class="col-3 change float-right mt-1">Change</a>
+
+                                            </div>
+                                       
+                                    <img class="card-img-top w-100 h-100 mb-5 " src="images/img1.png" alt="">
+                                    
+                                    </div>
+                                    <a href="payment.html" class="PayBook col-lg-12  btn-block  pt-2 pb-2" >  PAY & BOOK PARTY</a>
+                                
+                                
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+
+		
+    <script src="jquery/jquery-3.4.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="bootstrap-4/js/bootstrap.min.js"></script>
+
+    <script src='https://npmcdn.com/react@15.3.0/dist/react.min.js'></script>
+    <script src='https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js'></script>
+    
+        <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,653 @@
+@font-face {
+    font-family:AvenirBold ;
+    src: url(AvenirNextLTPro-Bold.otf);
+}
+@font-face {
+    font-family:AvenirReg;
+    src: url(AvenirNextLTPro-Regular.otf);
+}
+a{
+    text-decoration: none !important;
+
+}
+@media (min-width: 1200px){
+    .navbar-expand-xl .navbar-nav .nav-link {
+        padding-right: 0px !important; 
+        padding-left: 0px !important;
+    }
+}
+
+.mynav{
+    background-color: white !important;
+    box-shadow:10px 10px 10px rgb(214, 214, 214); 
+}
+
+/*global*/
+.backbtn{
+    background-color: rgba(255, 154, 0, 0.3);
+    padding: 5px 10px;
+    font-size: 14px;
+    
+    text-decoration: none;
+    color: #FF9A00;
+    border-radius: 50px;
+}
+.PayBook{
+    background-color: #00C4FF;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    padding: 5px 50px;
+    text-align: center;
+}
+.btn-secondary{
+    background-color: #FF9A00 !important;
+    border-color: transparent;
+}
+
+:root {
+    --mainColor: #ff9800;
+    --mainColor2: #00C4FF;
+  }
+ .PayBook:hover , .btn-secondary:hover, .bluebtn:hover, .bluebtn2:hover{
+    background:
+    linear-gradient(
+      to right,
+      var(--mainColor) 0%,
+      var(--mainColor) 5px,
+      transparent
+      
+    );
+    color: white;
+}
+.orangebtn:hover, .backbtn:hover{
+    background:
+    linear-gradient(
+      to right,
+      var(--mainColor2) 0%,
+      var(--mainColor2) 5px,
+      transparent
+      
+    );
+    color: white;
+
+}
+
+.navbar-light .navbar-toggler{
+    border-color:black ;
+    
+    padding: 2px 5px !important;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #FF9A00;
+}
+       
+
+         
+
+/*global end*/
+#themeBg{
+    background-image: url(../images/bg2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;  
+}
+
+#birthdays{
+color: #FF8100;
+font-weight: bold;
+}
+
+.navbar-brand h4{
+    color: #00C4FF;
+    font-weight: bold;
+}
+.navbar{
+    padding: .8rem;
+  }
+  .navbar-nav li{
+   padding-right: 20px;
+  }
+  .nav-link{
+    font-size: 1.1em !important;
+  }
+  .navbar-light .navbar-nav .nav-link{
+      color: black ;
+      font-size: 13px !important;
+  }
+  .navbar-light .navbar-nav .nav-link span{
+      padding-left: 18px;
+      
+  }
+  .nav-item span{
+      color: grey !important;
+  }
+ 
+  .navbar-light .navbar-nav .nav-link.active{
+      color: #FF8100 !important;
+  }
+  
+   /*theme body*/
+  
+
+.venue h4{
+    text-align: center;
+    color: #FF9A00;
+}
+/* form*/
+.form-control{
+    border-radius: 2.25rem !important;
+}
+.textarea{
+    border-radius: 10px !important;
+}
+.form-group label{
+    font-size: 15px !important;
+    color: #FF8100 !important;
+}
+.form-check-inline, .form-check-input{
+    color: #FF9A00 !important;
+}
+input[type=checkbox], input[type=radio]{
+    color: #FF9A00 !important;
+}
+.form-check-inline a{
+background-color: #c5c5c5;
+border-radius: 20px;
+color: grey;
+font-size: 12px;
+padding: 5px 10px;
+margin-right: 30px;
+}
+.choose p{
+    color: #FF9A00;
+    font-size: 14px;
+}
+  
+
+@media (min-width:320px) and (max-width:480px){
+#themeBg{
+    background-image: url(../images/bgmob.png);
+    background-repeat: no-repeat;
+    background-size: 100%;  
+}
+.form-check{
+    margin-left: 15px !important;
+}
+.navbar-light .navbar-nav .nav-link span{
+    display: none;
+    
+}
+.navbar-light .navbar-nav .nav-link{
+    color: black !important;
+    font-size: 15px !important;
+}
+
+}
+@media (max-width: 1024px) and (min-width: 479px){
+    #themeBg{
+        background-image: url(../images/bgipad.png);
+        background-repeat: no-repeat;
+        background-size: 100%;  
+    }
+    .navbar-light .navbar-nav .nav-link{
+        color: black !important;
+        font-size: 25px !important;
+    }
+    .navbar-brand h4{
+        font-size: 32px;
+    }
+   
+   
+}
+/*host theme.html*/
+.themeDiv{
+    background-color: white;
+    box-shadow:3px 3px 4px 4px rgb(214, 214, 214); 
+    padding: 10px;
+}
+.themeTitle{
+    font-size: 13px;
+    color: black;
+    
+}
+
+.themeBody{
+    font-size: 12px;
+    color: #c5c5c5;
+    margin-top: -10px;
+    
+}
+.rowhr{
+    margin-top: -5px !important;
+    margin-bottom: 5px !important;
+}
+.editTheme{
+    background-color: #c5c5c5;
+    color: grey;
+    border: 2px solid rgb(196, 195, 195);
+    font-size: 14px;
+    padding: 5px 95px;
+    
+}
+.DeleteTheme{
+    
+    border: 2px solid;
+    border-color: #FA5B5B;
+    opacity: .6;
+    padding: 5px 87px;
+    color: #FA5B5B;
+    font-size: 14px !important;
+}
+.editTheme:hover{
+    text-decoration: none;
+    color: rgb(88, 82, 82);
+
+} .DeleteTheme:hover{
+    text-decoration: none;
+color: rgb(211, 66, 114);
+}
+.themeDiv2{
+    background-color: #FA5B5B;
+    opacity: 0.2;
+    border: 2px solid #FA5B5B;
+}
+.themeDiv2 i{
+    margin-top: 85%;
+}
+.fa-plus-circle{
+    font-size: 45px;
+    color: white;
+}
+@media (min-width: 1100){
+    .DeleteTheme{
+        padding: 5px 50px;
+    }
+}
+@media (min-width:320px) and (max-width:480px){
+    .themeDiv2 i{
+        margin-top: 0%;
+    }
+    .navbar-light .navbar-nav .nav-link span{
+        display: none !important;
+        
+    }
+    .navbar-light .navbar-nav .nav-link{
+        color: black !important;
+        font-size: 15px !important;
+    }
+    }
+    @media (max-width: 1024px) and (min-width: 479px){
+       
+        .themeDiv2 i{
+            margin-top: 70%;
+        }
+        .navbar-light .navbar-nav .nav-link span{
+            padding-left: 0px;
+        }
+        .navbar-light .navbar-nav .nav-link span{
+            display: none !important;
+            
+        }
+        .themeTitle{
+            font-size: 16px;
+            color: black;
+            
+        }
+        .themeBody{
+            font-size: 14px;
+            color: #c5c5c5;
+            margin-top: -10px;
+            
+        }
+        .navbar-light .navbar-nav .nav-link{
+            color: black !important;
+            font-size: 25px !important;
+        }
+        .navbar-brand h4{
+            font-size: 32px;
+        }
+        
+       
+    }
+    /*resources.html*/
+    .resources p{
+        font-size: 12px;
+        color: black;
+        margin-top: 10px;
+    }
+    @media (min-width:320px) and (max-width:480px){
+        .resources p{
+            font-size: 16px !important;
+            color: black;
+            margin-top: 10px;
+        }
+        .navbar-light .navbar-nav .nav-link{
+            color: black !important;
+            font-size: 15px !important;
+        }
+    }
+    @media (max-width: 1024px) and (min-width: 479px){
+        .resources p{
+            font-size: 25px !important;
+            color: black;
+            margin-top: 10px;
+        }
+        .navbar-light .navbar-nav .nav-link{
+            color: black !important;
+            font-size: 20px !important;
+        }
+        .navbar-brand h4{
+            font-size: 32px;
+        }
+        .venue h4{
+            font-size: 30px;
+        }
+    }
+    /*resources1.html*/
+    .backcover{
+        background-image: url(../images/resBg.png);
+        background-repeat: no-repeat;
+        background-size: 100%; 
+        height: 35vh; 
+    }
+    .backcover p{
+        margin-top: 10%;
+        color: white;
+        font-size: 25px;
+        font-weight: 100px;
+    }
+    .resourceTitle{
+        font-size: 16px;
+        
+        color: black;
+    }
+    .resourceBody{
+        font-size: 13px;
+        color: black;
+    }
+    @media (min-width:320px) and (max-width:480px){
+        .backcover{
+         
+            height: 20vh; 
+        }  
+        .backcover p{
+            margin-top: 12%;
+          
+            font-size: 18px;
+           
+        }
+        .resourceTitle{
+            font-size: 18px;
+        } 
+        .resourceBody{
+            font-size: 16px;
+        }  
+        .navbar-light .navbar-nav .nav-link{
+            color: black !important;
+            font-size: 15px !important;
+        }
+    }
+    @media (max-width: 1024px) and (min-width: 479px){
+        .backcover{
+        
+            height: 20vh; 
+        } 
+        .backcover p{
+            margin-top: 12%;
+          
+            font-size: 28px;
+           
+        }
+        .resourceTitle{
+            font-size: 22px;
+        } 
+        .resourceBody{
+            font-size: 20px;
+        }  
+        .navbar-light .navbar-nav .nav-link{
+            color: black !important;
+            font-size: 25px !important;
+        }
+        .navbar-brand h4{
+            font-size: 32px;
+        }
+
+    }
+/*schedule*/
+.cd-schedule-modal{
+visibility: hidden !important;
+}
+.schedule{
+    background-color: white;
+    box-shadow: 3px 3px 4px 4px rgb(214, 214, 214);
+
+    
+    
+    padding: 15px; 
+}
+.form-group1{
+    margin-bottom: 12px !important;
+}
+.btn{
+    color-shadow: none !important;
+    box-shadow: none !important;
+}
+#calendar, .cd-schedule span , .cd-schedule li{
+    font-size: 14px !important;
+}
+.scheduleP{
+    font-size: 12px;
+}
+.scheduleP span{
+    color: #00C4FF;
+}
+.ScheduleDropdown{
+    border: 2px solid #FF8100 !important;
+    background-color: #FF8100 !important;
+    border-radius: 20px !important;
+    color: white;
+    font-size: 12px !important;
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 5px !important;
+    float: right;
+    
+
+}
+.DisableBtn{
+    border: 2px solid #FA5B5B !important;
+    background-color: #FA5B5B !important;
+    border-radius: 20px !important;
+    color: white;
+    font-size: 12px !important;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px !important;
+    float: right;
+    
+
+}
+.ActiveBtn{
+    border: 2px solid #24CE5F !important;
+    background-color: #24CE5F !important;
+    border-radius: 20px !important;
+    color: white;
+    font-size: 12px !important;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px !important;
+    float: right;
+    
+
+}
+.mylabel{
+    font-size: 12px !important;
+    color: black;
+    margin-top: 10px;
+   
+  
+}
+.diffBtn{
+    border: 1px solid lightgray;
+    border-radius: 30px;
+    padding: 0px 3px;
+}
+.diffBtn button{
+    font-size: 12px !important;
+}
+
+
+.schedulePageCalendar{
+    background-color: white;
+    box-shadow: 3px 3px 4px 4px rgb(214, 214, 214);
+
+    
+}
+
+@media (min-width:320px) and (max-width:480px){
+    .ActiveBtn, .DisableBtn, .ScheduleDropdown{
+        margin-top: 5px;
+    }
+    .mylabel{
+        margin-top: 10px;
+    }
+    #calendar{
+        font-size: 11px !important;
+    }
+    .cd-schedule-modal{
+        visibility: visible !important;
+        }
+       
+
+}
+@media (max-width: 1024px) and (min-width: 479px){
+    .mylabel{
+        font-size: 14px !important;
+        color: black;
+       
+      
+    } 
+    
+    .ActiveBtn, .DisableBtn, .ScheduleDropdown, .bluebtn2{
+        font-size: 20px !important; 
+    }  
+    .navbar-light .navbar-nav .nav-link{
+        color: black !important;
+        font-size: 25px !important;
+    }
+    .navbar-brand h4{
+        font-size: 32px;
+    }
+    .cd-schedule-modal{
+        visibility: visible!important;
+        }
+       
+}
+
+
+/*booked parties*/
+.client p{
+font-size: 14px;
+margin-bottom: 0px !important;
+}
+.rectangle{
+    background-color: white;
+    box-shadow:10px 10px 40px rgb(236, 236, 236);
+    padding-top: 20px;
+}
+.title{
+    color: #FF8100 !important;
+    font-weight: bold !important;
+    letter-spacing: 1px;
+}
+.booking{
+    color: black;
+    
+    font-size: 14px;
+}
+.bluebtn{
+    background-color: #00C4FF;
+    border-radius: 30px;
+    color: white;
+    
+    font-size: 13px;
+    
+}
+.bluebtn2{
+    background-color: #00C4FF;
+    border-radius: 30px;
+    color: white;
+    padding: 10px 60px;
+    font-size: 13px;
+    
+}
+.orangebtn{
+    background-color: #FF9A00;
+    border-radius: 30px;
+    color: white;
+    padding: 5px 20px;
+    font-size: 13px;
+}
+@media (min-width:320px) and (max-width:480px){
+    .rectangle hr{
+        display: none;
+    }
+    .bluebtn{
+       
+        font-size: 12px;
+        
+    }
+    .orangebtn{
+       
+        font-size: 12px;
+    }
+    .navbar-light .navbar-nav .nav-link{
+        color: black !important;
+        font-size: 15px !important;
+    }
+    .client p{
+        font-size: 13px !important;
+        padding: 5px !important;
+    }
+    .venue h4{
+        font-size: 20px !important;
+    }
+    .TwoButtons .text-right, .TwoButtons .text-left{
+        text-align: center !important;
+    }
+    
+}
+@media (max-width: 1024px) and (min-width: 479px){
+    .TwoButtons .text-right, .TwoButtons .text-left{
+        text-align: center !important;
+    }
+    .client p{
+        font-size: 20px;
+        }
+        
+        .booking{
+           
+            
+            font-size: 20px;
+        }
+        .bluebtn{
+           
+            font-size: 15px;
+            
+        }
+        .orangebtn{
+           
+            font-size: 15px;
+        }
+        .navbar-light .navbar-nav .nav-link{
+            color: black !important;
+            font-size: 25px !important;
+        }
+        .navbar-brand h4{
+            font-size: 32px;
+        }
+
+}
+
+
+

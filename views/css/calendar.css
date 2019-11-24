@@ -1,0 +1,109 @@
+/* CSS Document */
+.text-white{
+  color: black !important;
+}
+
+.bg-dark{
+  background-color: transparent !important;
+}
+
+
+.border{
+  border: 1px solid lightgray !important;
+}
+.selected{
+  background-color: #dc3545 !important;
+}
+
+.btn-outline-light{
+  color: black !important;
+}
+.current-date-selected{
+  color: #FF9A00 !important;
+}
+
+
+.btn-rounded-dark{
+  position: relative;
+  transition: all .5s;
+}
+.btn-rounded-dark:after{
+  content: '';
+  position: absolute;
+  width: 0;
+  top: 50%;
+  height: 0;
+  border-radius: 50%;
+  transition: all .5s;
+  opacity: 0;
+  background: #343a40;
+  border: 1px solid transparent;
+}
+.btn-rounded-dark:hover:after{
+  content: '';/*attr(data-date);*/
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 15%;
+  opacity: 1;
+  background: transparent;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid #343a40;
+}
+.btn-rounded-success{
+  position: relative;
+  transition: all .5s;
+}
+.btn-rounded-success:after{
+  content: '';
+  position: absolute;
+  width: 0;
+  top: 50%;
+  height: 0;
+  border-radius: 50%;
+  transition: all .5s;
+  opacity: 0;
+  background: #28a745;
+  border: 1px solid transparent;
+}
+.btn-rounded-success:hover:after{
+  content: '';/*attr(data-date);*/
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 15%;
+  opacity: 1;
+  background: transparent;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid #28a745;
+}
+.current-date-selected{
+  color: #dc3545;
+  font-weight: bold;
+}
+.current-date-selected:after{
+  content: '';/*attr(data-date);*/
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 15%;
+  opacity: 1;
+  background: transparent;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid #dc3545;
+}
+.current-date-selected:hover:after{
+  content: '';/*attr(data-date);*/
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 15%;
+  opacity: 1;
+  background: #dc354533;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid #dc3545;
+}

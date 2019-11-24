@@ -1,0 +1,62 @@
+.navbar-brand h4 {
+    color: #00C4FF;
+    font-weight: bold;
+   
+}
+@media (max-width: 1024px) and (min-width: 479px){
+    .cd-schedule__event{
+        height: 75px !important;
+    }
+    .schedule{
+        padding: 0px;
+    }
+
+}
+@media (min-width:320px) and (max-width:480px){
+   
+    .cd-schedule__event{
+        height: 75px !important;
+    }
+    .schedule{
+        padding: 0px;
+    }
+
+}
+table{
+    border-collapse: separate;
+    border-spacing: 5px 10px;
+}
+.MW{
+    border-spacing: 3px 10px !important;
+}
+tr{
+    border-bottom: 2px solid black !important;
+}
+.headerP{
+font-size: 12px;
+}
+.dropdown-item{
+    font-size: 12px;
+}
+.dropdown-item:active{
+    background-color: #00C4FF !important;
+}
+
+th{
+    color: #FF8100;
+    font-size: 12px;
+  
+    
+}
+td{
+    color: grey;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 0px;
+    border: 1px solid #e4e1e1;
+    width: 100px;
+    border-radius: 3px;
+}
+
+
+  

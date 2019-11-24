@@ -1,0 +1,287 @@
+
+
+:root {
+    --mainColor: #ff9800;
+    --mainColor2: #00C4FF;
+  }
+#themeBg{
+    background-image: url(../images/themeBg.png);
+    background-repeat: no-repeat;
+    background-size: 100%; 
+}
+.venue p, .venue h5{
+    text-align: center;   
+}
+.selectThemep{
+    font-size: 14px;
+}
+.back{
+    margin-top: 40px;
+}
+.title{
+    color: #FF9700 ;
+    font-weight: bold;
+    font-size: 22px;
+}
+.subTitle{
+    color: grey;
+    font-size: 12px;
+}
+.rectangle a{
+    color: #c5c5c5;
+    font-size: 13px;
+}
+#inputPassword2{
+    border-color: transparent;    
+}
+.card-body img{
+    width: 15px;
+    margin-top: -7px;
+}
+
+.form-control{
+    font-size: 14px !important;
+    border: none;
+    border-radius: 0;
+}
+.themebtn{    
+    background-color: #FF9A00;
+   
+    /*padding: 10px 48px;*/
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+.selectThemep p{
+    float: right;
+}
+.themebtn:hover{
+    background:
+    linear-gradient(
+      to right,
+      var(--mainColor2) 0%,
+      var(--mainColor2) 5px,
+      transparent
+    );
+    color: white;
+    
+  }
+  a{
+      text-decoration: none;
+
+  }
+  a:hover{
+      text-decoration: none;
+  }
+.myhr{
+    margin-top: -10px;
+}
+#comment{
+    border-color: transparent;
+}
+.form-control:disabled, .form-control[readonly]{
+    background-color: transparent;
+}
+.card-body{
+    padding: 1px !important;
+}
+.red{
+    color: #EF4040;
+    font-size: 5px  !important;
+}
+.green{
+    color: #37c64f;
+    font-size: 5px  !important;
+}
+.blue{
+    color: #00BAFF;
+    font-size: 5px  !important;
+}
+.back1{
+    margin-top: 45px;
+}
+iframe{
+    padding-left: 15% !important;
+ }
+/*media queries*/
+@media (min-width:320px) and (max-width:480px){
+    #themeBg{
+        background-image: url(../images/themeMob.png);
+        background-repeat: no-repeat;
+        background-size: 100%; 
+    } 
+    .selectThemep p{
+        float: left;
+    }
+    iframe{
+        padding-left: 23% !important;
+     }
+    
+   
+    .back{
+        margin-top: 30px;
+    }
+    .back1{
+        margin-top: 2px;
+    }
+    .title{
+        margin-top: 10px;
+        font-size: 20px !important;
+    }
+    p{
+        font-size: 12px !important;
+    }
+    .form-control{
+        font-size: 12px !important;
+        border: none;
+        border-radius: 0;
+    }
+    .themebtn{
+        
+        font-size: 12px;
+    }
+    .card-title1{font-size: 18px !important;}
+}
+@media (max-width: 1024px) and (min-width: 479px) { 
+    #themeBg{
+        background-image: url(../images/themeipad.png);
+        background-repeat: no-repeat;
+        background-size: 100%; 
+    }
+    
+    p{
+        font-size: 20px !important;
+    }
+    .form-control{
+        font-size: 20px !important;
+        border: none;
+        border-radius: 0;
+    }
+    .venue{
+        margin-top: 30px !important;
+    }
+    
+    .venue h5{
+        font-size: 25px !important;
+    }
+    .title{
+        font-size: 25px !important;
+    }
+    .backbtn{
+        font-size: 18px !important;
+    }
+
+}
+/*theme selected.html*/
+.seprator{
+    color: #FF9A00;
+    font-weight: bold;
+}
+.link{
+    color: #00C4FF;
+}
+.form-control1{
+    border-color: grey;
+    border: 1px solid;
+    font-size: 14px;
+    padding: 3px;
+}
+.form-group1{
+    margin-bottom: 5px !important;
+}
+
+.form-group1 label{
+    color: #FF9900;
+    font-size: 13px;
+}
+.card-title1{
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+.change{
+    color: grey;
+    font-size: 12px;
+    text-decoration: none;
+
+}
+.change:hover{
+    text-decoration: none;
+    color: grey;
+    font-weight: 10px;
+}
+/*payment.html*/
+.paymentTitle{
+    color: black;
+    font-size: 14px;
+}
+.rectangle{
+    box-shadow: 3px 3px 10px 10px rgb(245, 245, 245);
+    border-radius: 10px;
+    background-color: white;
+    
+    padding: 15px; 
+
+}
+.myrectangle{
+    box-shadow: 3px 3px 10px 10px rgb(245, 245, 245);
+    border-radius: 0px 0px 10px 10px;
+    background-color: white;
+    margin-bottom: 101px;
+    padding: 15px; 
+
+}
+.rectangle2{
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 0px 0px 10px 10px;
+    
+}
+.rectangle h5{
+    color: #FF9A00;
+    font-size: 18px;
+}
+.rectangle p{
+    font-size: 11px;
+    color: grey;
+}
+.paypal{
+    width: 50px;
+}
+.paypal2{
+    width: 30px;
+}
+.form-check-input{
+    font-size: 14px !important;
+}
+.final{
+    color: #FF8100 !important;
+    font-weight: bold;
+}
+.heading{
+    background-color: #FF9A00;
+    padding: 3px 0px;
+    border-radius: 10px 10px 0px 0px;
+    
+}
+.heading p{
+    color: white;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+/*media queries payment.html*/
+@media (min-width:320px) and (max-width:480px){
+.rectangle{
+    padding: 2px;
+}
+.rectangle h5, .rectangle a{
+    font-size: 12px;
+}
+.myrectangle{
+    margin-bottom: 50px;
+}
+}
+@media (max-width: 1024px) and (min-width: 479px){
+
+}

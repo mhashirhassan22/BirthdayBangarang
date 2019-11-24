@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Calendar files-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <!--Other Files-->
+    <link rel="stylesheet" href="bootstrap-4/css/bootstrap.min.css">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/schecdule.css">
+    
+    
+    <title>Schedule</title>
+    <style>
+    .calendar{
+        width: 100% !important;
+        padding: 0px 30px;
+        margin-top: -5px;
+      
+    }      
+   
+
+    </style>
+</head>
+<body id="themeBg">
+        
+<!--nav-->
+<nav class="navbar navbar-expand-xl navbar-light mynav">
+    <div class="">
+    <a class="navbar-brand" href="#"><h4>Bangarang <span id="birthdays"> Birthdays</span></h4></a>
+    </div>
+    <button class="navbar-toggler ml-auto"  type="button" data-toggle="collapse" data-target="#navbarResponsive">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="#">Resources <span> | </span></a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Direct Link <span> | </span></a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Booked Parties <span> | </span></a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Schedule <span> | </span></a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Themes</a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="font-weight: bold; color:#00C4FF">Username</a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#"><i class="fas fa-sign-in-alt" style="font-size: 16px;color: #00C4FF"></i></a> 
+            </li>
+          
+        </ul>
+    </div>
+</nav>
+<!--theme header-->
+<div class="container ">
+    <div class="row mt-5">
+        <div class="col-12 col-lg-12 col-xl-12 venue mb-3">
+           <h4 class="title" style="font-weight: bold;">Set Your Schedule</h4>
+        </div>
+    </div>
+    
+<!--2 column area-->
+
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-xs-12 col-xl-3 col-lg-3 col-md-5   pl-3 pr-3  " >
+            <p class="headerP text-center">Typical Schedule</p>
+            <div class="schedule">
+              
+        <table cellpadding="0" cellspacing="0"  style="width: 100%;border-bottom: 1px solid grey;">
+          <tr>
+            <th >S</th>
+            <td>X</td>
+            <td>X</td>
+            <td>X</td>
+            <td>X</td>
+            </tr>  
+          </table> 
+  
+          <table cellpadding="0" cellspacing="0"  style="width: 100%;border-bottom: 1px solid grey;" class="MW">
+            <tr >
+              <th >M</th>
+              <td>X</td>
+              <td>X</td>
+              <td>X</td>
+              <td>X</td>
+            </tr>  
+          </table> 
+  
+          <table cellpadding="0" cellspacing="0"  style="width: 100%;border-bottom: 1px solid grey;">
+            <tr >
+              <th>T</th>
+              <td>X</td>
+              <td>X</td>
+              <td>X</td>
+              <td>X</td>
+            </tr>  
+          </table> 
+  
+          <table cellpadding="0" cellspacing="0"  style="width: 100%;border-bottom: 1px solid grey;" class="MW">
+            <tr >
+              <th>W</th>
+              <td>X</td>
+              <td>X</td>
+              <td>X</td>
+              <td>X</td>
+            </tr>  
+          </table> 
+  
+          <table cellpadding="0" cellspacing="0"  style="width: 100%;border-bottom: 1px solid grey;">
+            <tr>
+              <th>T</th>
+              <td>X</td>
+              <td>X</td>
+              <td>X</td>
+              <td>X</td>
+            </tr>  
+          </table> 
+  
+          <table cellpadding="0" cellspacing="0"  style="width: 100%;border-bottom: 1px solid grey;">
+            <tr>
+              <th>F</th>
+              <td>X</td>
+              <td>X</td>
+              <td>X</td>
+              <td>X</td>
+            </tr>  
+          </table> 
+  
+          <table cellpadding="0" cellspacing="0"  style="width: 100%">
+            <tr >
+              <th>S</th>
+              <td>X</td>
+              <td>X</td>
+              <td>X</td>
+              <td>X</td>
+            </tr>  
+          </table> 
+        </div>
+      </div>
+      <!--calendar-->
+      
+      
+      <div class=" col-xl-3 col-lg-3 col-md-5 col-sm-12 sol-xs-12 ml-1 text-center  " >
+            <p class="headerP text-center">Modify Specific Date</p>   
+            <div class="schedulePageCalendar">
+        <div id="calendar" class="row justify-content-center"></div>
+        <!--Calendar buttons-->
+        <div >
+          <p class="text-center scheduleP mb-2 mt-2">Current Schedule <span  class="ml-2">      20 May 2019</span></p>
+            <div class="row justify-content-center ">
+              <div class="col-xl-5 col-lg-5 col-md-6 col-5 diffBtn ">
+                <label for="" class="mylabel text-left">11 AM</label>
+                <button class="DisableBtn btn btn-outline-secondary  text-right" id="dropdownbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Disable</button>
+              </div>
+              <div class="col-xl-5 col-lg-5 col-md-6 col-5 diffBtn ml-1">
+                <label for="" class="mylabel text-left ">2 PM</label>
+                <button class="ActiveBtn btn btn-outline-secondary  text-right" id="dropdownbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Activate</button>
+              </div>
+            </div>
+            <div class="row justify-content-center mb-2">
+              <div class=" col-10 mt-1 mb-2   diffBtn">
+                <label for="" class="mylabel " style="margin-right: 60px">Add one-time slot</label>
+                <button class="ScheduleDropdown btn btn-outline-secondary  text-right" id="dropdownbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">5 PM</button>
+              </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+  </div>
+<!--Row with 2 Buttons-->
+<div class="container">
+    <div class="row justify-content-center mt-3">
+      <div class="col-xl-2 col-lg-3 col-md-4 col-10  diffBtn "  >
+        <label for="" class="mylabel ml-3">Appt Reminder</label>
+        <button class="ScheduleDropdown btn btn-outline-secondary dropdown-toggle text-right" id="dropdownbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2 Days</button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">8 Days</a>
+            <a class="dropdown-item" href="#">9 Days</a>
+            <a class="dropdown-item" href="#">10 Days</a>
+            <div role="separator" class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">11 Days</a>
+          </div>
+        </div>
+       
+        <div class="col-xl-3 col-lg-5 col-md-6 col-10 diffBtn ml-1"  >
+          
+            <label for="" class="mylabel ml-3">Min Days Advance Booking</label>
+            <button class="ScheduleDropdown btn btn-outline-secondary dropdown-toggle" id="dropdownbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">7 Days</button>
+            <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">8 Days</a>
+            <a class="dropdown-item" href="#">9 Days</a>
+            <a class="dropdown-item" href="#">10 Days</a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">11 Days</a>
+            </div>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3 mb-5">
+        <div class="col-12 text-center"><a href="#" class="bluebtn2">SAVE AND UPDATE</a></div>
+      </div>
+  </div>
+    
+
+
+    
+<!--Jquery bootstrap popper files-->   
+    
+    <script src="jquery/jquery-3.4.0.min.js"></script>
+    <script src="js/popper.min.js"></script> 
+    <script src="bootstrap-4/js/bootstrap.min.js"></script>  
+<!--script files of calendar-->
+    <script src='https://npmcdn.com/react@15.3.0/dist/react.min.js'></script>
+    <script src='https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js'></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

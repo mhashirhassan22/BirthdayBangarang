@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="bootstrap-4/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>    
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/selectTheme.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Payment</title>
+    <style>
+        input[type='radio'] {
+        display: none;
+      }
+      
+      .checkboxLabel:before {
+        content: " ";
+        display: inline-block;
+        position: relative;
+        top: 5px;
+        margin: 0 5px 0 0;
+        width: 17px;
+        height: 17px;
+        border-radius: 11px;
+        border: 2px solid #FF9A00;
+        background-color: transparent;
+      }
+      
+      input[type='radio']:checked+.checkboxLabel:before {
+        position: relative;
+        border: 2px solid #FF9A00;
+        border-radius: 11px;
+        width: 17px;
+        height: 17px;
+        top: 5px;
+        content: " ";
+        display: inline-block;
+        background-color: #FF9A00;
+      }
+          </style>
+   
+</head>
+<body id="themeBg" >
+   <!--nav-->
+<nav class="navbar navbar-expand-md navbar-light  ">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#"><h4>Bangarang Birthdays</h4></a>
+    </div>
+    <button class="navbar-toggler ml-auto "  type="button" data-toggle="collapse" data-target="#navbarResponsive">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link contact" href="#">Contact Us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link white_btn contact" href="#">Become A Host</a>
+        </li>
+                
+    </ul>
+    </div>
+</nav>
+    
+    
+<!--Header-->
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-12 col-lg-4 text-center back">
+        <a href="#" class="backbtn"><i class="fas fa-chevron-left" style="margin-right: 10px;"></i>       Back to Venue</a>
+        </div>
+        <div class="col-12 col-lg-5 venue ">
+            <p class="title" style="font-size: 16px ; margin-left: 30px">PAY & BOOK PARTY</p>
+            <h5>Tumbling Studio</h5>
+            <p class="subTitle">15934 Park Ave, New York City, NY 92844<span class="seprator"> | </span>  (760)948-2233 <span  class="seprator"> | </span><span class="link">www.tublingstudio.com</span></p>
+        </div>
+        <div class="col-12 col-lg-3 text-center back1">
+            <a href="#" class="FAQbtn" ><i class="fas fa-question-circle"  style="margin-right: 10px"></i>      FAQ</a>
+        </div>
+    </div>
+    <hr>
+</div>
+    <!--body-->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-12 col-md-12 col-xl-8" >
+            <!--Venue Details Date-->
+            <div class="row justify-content-center">
+                <div class="col-4 col-lg-3" >
+                <p class="paymentTitle">Venue</p>
+                <div class="rectangle">
+                    <h5>Tumble Studio</h5>
+                    <a href="#">Review</a> / <a href="#">change</a>
+                </div>
+                </div>
+                <div class="col-4 col-lg-3">
+                    <p class="paymentTitle">Details</p>
+                    <div class="rectangle">
+                        <h5>All Filled <i class="ml-2 fas fa-check"></i></h5>
+                        <a href="#">Review</a> / <a href="#">change</a>
+                    </div>
+                </div>
+                <div class="col-4 col-lg-3" >
+                    <p class="paymentTitle">Date</p>
+                    <div class="rectangle">
+                        <h5>May 23, 2019</h5>
+                        <a href="#">Review</a> / <a href="#">change</a>
+                    </div>
+                 </div>
+            </div>
+            <!--payment methods-->
+            <div class="row justify-content-center mt-3">
+                <div class="col-12 col-lg-9 col-xl-9" >
+                    <p class="paymentTitle">Payment Method</p>
+                        <div class="rectangle"> 
+                        <div class="row">
+                            <div class="col-10 col-lg-10">
+                                <div class="form-check">
+                                    <div class="radio">
+                                        <input id="paypal" type="radio" name="gender" value="paypal">
+                                        <label class="checkboxLabel" for="paypal" style=" color: black; margin-top: 2px;">    Paypal</label>
+                                       
+                                      </div>
+                                </div>
+                                <p>You will be directed to PayPal for complete payment . </p>
+                            </div>
+                           
+                            <div class="col-2 col-lg-2">
+                                <img src="images/paypal.png" class="paypal float-right" alt="">
+                            </div>
+                        </div>
+                        </div>
+                        <div class="rectangle2 mt-2 mb-5">
+                            <div class="row">
+                                <div class="col-6 col-lg-4 col-xl-8">
+                                    <div class="form-check">
+                                        <div class="radio">
+                                            <input id="female" type="radio" name="gender" value="female">
+                                            <label class="checkboxLabel" for="female" style=" color: black; margin-top: 2px;">    Credit / Debit Card</label>
+                                           
+                                          </div>
+                                    </div>
+                                                  
+                                </div>
+                                   
+                                <div class="col-6 col-xl-4 mt-2">
+                                    <img src="images/card1.png" class="paypal2 float-right mr-2" alt="">
+                                    <img src="images/card2.png" class="paypal2 float-right mr-2" alt="">
+                                    <img src="images/card3.png" class="paypal2 float-right mr-2" alt="">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+        <!--summery-->
+        <div class="col-12 col-lg-9 col-xl-3 mt-1 mb-5" >
+            <div class="col heading " >
+                <p>Summary</p>
+            </div>
+            <div class="myrectangle ">
+                <div class="body">
+                    <div class="row">
+                        <p class="col" style="font-size: 12px">1 Day Rental</p>
+                        <p class="col float-right" style="font-size: 12px">$125.00</p>
+                    </div>
+                    <div class="row">
+                        <p class="col" style="font-size: 12px">VAT (20%)</p>
+                        <p class="col" style="font-size: 12px">$25.00</p>
+                    </div>
+                    <hr style="margin-top: 0px">
+                    <div class="row">
+                        <p class="col" style="font-size: 12px">Final Price</p>
+                        <p class="col final" style="font-size: 12px">$150.00</p>
+                    </div>
+
+                        
+
+                </div>
+            </div>
+            <a href="#" class="PayBook col-lg-12  text-center" style="border-radius: 5px !important;">PAY & BOOK PARTY</a>
+
+        </div>
+    </div>
+</div>
+    
+		
+    <script src="jquery/jquery-3.4.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="bootstrap-4/js/bootstrap.min.js"></script>
+</body>
+</html>

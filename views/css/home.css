@@ -1,0 +1,523 @@
+.overlay{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 0%;
+    overflow-x: hidden;
+    background-color: rgba(0,0,0,.6);
+    z-index: 5;
+    transition: all 0.5s;
+}
+.overlay2{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 0%;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+    transition: all 0.5s;
+}
+
+.overlay-content{
+    
+    position: relative;
+    text-align: center;
+    
+    width: 100%;
+    top: 15%;
+
+}
+:root {
+  --mainColor: #ff9800;
+}
+.loginBtn:hover, .loginBtn2:hover{
+  background:
+  linear-gradient(
+    to right,
+    var(--mainColor) 5%,
+    var(--mainColor) 20px,
+    transparent
+  );
+  color: white;
+}
+
+
+.loginBtn{
+    background-color: #FF9A00;
+    border-radius: 20px;
+    padding: 5px;
+    color: white;
+}
+.loginBtn2{
+    background-color: rgb(225, 154, 0, 0.3);
+    border-radius: 20px;
+    padding: 5px;
+   color: #FF9A00
+    
+    
+}
+.loginBtn:hover , .loginBtn2:hover{
+    text-decoration: none;
+    
+}
+.close-btn, .close-btn2{
+    position: absolute;
+    top: 0px;
+    right: 20px;  
+    color: #FF8100;
+    text-decoration: none; 
+    font-size: 25px;
+}
+.close-btn:hover, .close-btn2:hover{
+    font-weight: bold !important;
+    text-decoration: none;
+    color: #FF9A00 !important;
+}
+.form-check-label, .form-check-input{
+  color: #FF9A00 !important;
+  
+}
+
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+  }
+  
+  #formContent {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 350px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+  }
+  #formContent2 {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    width: 60%;
+    
+    position: relative;
+    padding: 12px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+  }
+  @media (min-width:320px) and (max-width:480px){
+    #formContent2{
+        width: 100% !important;
+  }
+  }
+  
+  #formFooter {
+    background-color: #f6f6f6;
+    border-top: 1px solid #dce8f1;
+    padding: 25px;
+    text-align: center;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  
+  
+  /* TABS */
+  
+  h2.inactive {
+    color: #cccccc;
+  }
+  
+  h2.active {
+    color: #0d0d0d;
+    border-bottom: 2px solid #5fbae9;
+  }
+  
+  
+  
+  /* FORM TYPOGRAPHY*/
+  
+  input[type=button], input[type=submit], input[type=reset]  {
+    background-color: #56baed;
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 20px 40px 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+    background-color: #39ace7;
+  }
+  
+  input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+    -moz-transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  .forget{
+      color: #c5c5c5;
+      font-size: 12px;
+  }
+
+  .forget:hover{
+      text-decoration: none;
+      color: #cccccc;
+  }
+  .form-check-label{
+      font-size: 12px !important;
+      color: grey;
+  }
+  .inputPic1{
+    background-image: url(../images/email.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 7px 4px;
+   
+    
+  }
+  .inputPic2{
+    background-image: url(../images/password.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 7px 4px;
+   
+
+  }
+  .login-form input[type=text]{
+    padding: 5px 40px !important;
+
+  }
+  input[type=text] {
+    
+    
+    color: #0d0d0d;
+    padding: 5px 7px !important;
+    
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 5px;
+    width: 85%;
+    border: 1px solid #FF9A00;
+    border-radius: 50px !important;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+  }
+  
+  input[type=text]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+  }
+  
+  input[type=text]:placeholder {
+    color: #cccccc;
+  }
+  .form-check-label{
+    padding-left: 20px !important;
+  }
+  
+  
+  /* ANIMATIONS */
+  
+  /* Simple CSS3 Fade-in-down Animation */
+  .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  @-webkit-keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  /* Simple CSS3 Fade-in Animation */
+  @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  
+  .fadeIn {
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+  
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+  
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+  }
+  
+  .fadeIn.first {
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+  }
+  
+  .fadeIn.second {
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+  }
+  
+  .fadeIn.third {
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+  }
+  
+  .fadeIn.fourth {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+  
+  /* Simple CSS3 Fade-in Animation */
+  .underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+  }
+  
+  .underlineHover:hover {
+    color: #0d0d0d;
+  }
+  
+  .underlineHover:hover:after{
+    width: 100%;
+  }
+  
+  
+  
+  /* OTHERS */
+  
+  *:focus {
+      outline: none;
+  } 
+  
+  #icon {
+    width:60%;
+  }
+  .fadeIn.first h4{
+      color: #FF8100;
+      font-size: 28px;
+      font-weight: bold;
+  }
+  .fadeIn.first p{
+      font-size: 12px;
+      color: #666666;
+  }
+  .fadeIn.first a{
+    
+      font-weight: bold;
+  }
+  
+
+
+
+
+
+
+#homeBg{
+    background-image: url(../images/homeBg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;    
+}
+
+
+
+  .heading{
+      margin-top: 5%;
+  }
+  .heading h1{
+    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.161));
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.heading p{
+    color: white;  
+    text-align: center;
+    font-size: 16px;
+} 
+#WhereHow{
+    background-color: white;
+    border-radius: 50px;
+    width: 20%;
+}
+#inputID{
+    background: transparent;
+    border: transparent;
+    font-size: 14px;
+    padding: 0px 10px;
+    margin-top: -2px;
+    
+}
+#dropdownbtn{
+    border: transparent;
+    border-radius: 50px;
+    font-size: 14px;
+    padding-left: 1px;
+    margin-top: -2px;
+    color: grey;
+    background-color: transparent !important;
+}
+.btn.focus, .btn:focus{
+  box-shadow: none !important;
+}
+.headingbtn span{
+  margin-top: 2px;
+  color: grey;
+
+}
+
+#dropdownbtn:hover{
+   background-color: transparent;
+   color: grey !important;
+   border-color: transparent;
+   
+}
+.dropdown-toggle::after{
+  margin-left: 1.255em !important;
+  color: #00C4FF !important;
+}
+#location{
+    margin-top: 8px;
+}
+#car{
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.input-group-append{
+    margin-left: 15px;
+}
+.headingbtn{
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+#search{
+    margin-left: 30px;
+    width: 100%;
+}
+.card-body img{
+  width: 15px;
+  margin-top: -5px;
+
+}
+.card-body{
+  padding: 10px 0px !important;
+}
+
+/*featured*/
+.feature{
+    text-align: center;
+    display: inline-block;
+    margin-top: 5%;
+}
+.feature p{
+  font-size: 12px;
+  color: #666666;
+}
+.feature h5{
+  font-size: 22px;
+}
+.card-title {
+     margin-bottom: 0;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.card-text{
+    color: grey;
+    font-size: 14px;
+}
+.feature img{
+  width: 20px;
+}
+.price-tag{
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 50px;
+  padding: 2px;
+}
+.card-img-overlay p{
+  color: white !important;
+  opacity: 1 !important;
+  font-weight: bold;
+  font-size: 12px;
+}
+.card-img-overlay{
+  padding: 1rem !important;
+}
+    
