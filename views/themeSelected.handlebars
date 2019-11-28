@@ -69,8 +69,8 @@
         </div>
         <div class="col-12 col-lg-5 col-xl-5 col-md-6 venue ">
             <p class="title" style="font-size: 13px;margin-bottom: 0px;">VENUE</p>
-            <h4 class="text-center">Tumbling Studio</h4>
-            <p class="subTitle" style="color: black;">15934 Park Ave, New York City, NY 92844<span class="seprator"> | </span>  (760)948-2233 <span  class="seprator"> | </span><span class="link">www.tublingstudio.com</span></p>
+            <h4 class="text-center">{{venue.Name}}</h4>
+            <p class="subTitle" style="color: black;">{{user.Adderss}}<span class="seprator"> | </span>  {{user.Phone}} <span  class="seprator"> | </span><span class="link">{{user.Website}}</span></p>
                 
         </div>
         <div class="col-12 col-lg-3 col-xl-3 col-md-3 text-center " style="margin-top: 20px">
@@ -141,6 +141,9 @@
                         <label for="inputAddress">Phone</label>
                         <input type="text" class="form-control1 col-lg-12" id="inputAddress" placeholder="123-345677">
                     </div>
+                     <div class="entry">
+                            <input type="submit" value="PAY & BOOK PARTY" href="#" class="col-10 loginBtn mt-3 ml-4" style=" color :Blue;">
+                        </div>
                 </form>
             </div>
             <div class="col-12 col-lg-6 col-xl-3 col-md-6 ">
@@ -150,15 +153,15 @@
                                 <div class="Cards"> 
                                         <div class="card-body">
                                                 <img src="images/ninja.png" alt="">
-                                                <label class="card-title">Ninja Turtle</label>
+                                                <label class="card-title">{{theme.Name}}</label>
                                                 <a href="#" class="col-3 change float-right mt-1">Change</a>
 
                                             </div>
                                        
-                                    <img class="card-img-top w-100 h-100 mb-5 " src="images/img1.png" alt="">
+                                    <img class="card-img-top w-100 h-100 mb-5 " src="{{theme.Image}}" alt="">
                                     
                                     </div>
-                                    <a href="/payment" class="PayBook col-lg-12  btn-block  pt-2 pb-2" >  PAY & BOOK PARTY</a>
+                      
                                 
                                 
                             </div>

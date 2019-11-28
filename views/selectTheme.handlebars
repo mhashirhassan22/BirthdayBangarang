@@ -41,230 +41,166 @@
         </div>
         <div class="col-12 col-lg-5 col-xl-5 col-md-5 venue mt-3 ">
             <p class="title" style="font-size: 13px; margin-bottom: 0px;">VENUE</p>
-            <h4 class="text-center">Tumbling Studio</h4>
-            <p class="subTitle">15934 Park Ave, New York City, NY 92844</p>
+            <h4 class="text-center">{{venue.Name}}</h4>
+            <p class="subTitle">{{venue.Address}}</p>
         </div>
     </div>
     <hr style="width: 79% !important">
 </div>
+
 <div class="container" >
     <div class="row h-100 justify-content-center">
         <div class="col-2 col-lg-2 my-auto selectThemep">
             <p >Theme</p>
         </div>
+        {{#each  Themes}}
         <div class="col-5 col-lg-3">
             <div class="Cards"> 
                 <div class="card-body">
                     <img src="images/ninja.png" alt="">
-                    <label class="card-title">Ninja Turtle</label>
+                    <label class="card-title">{{this.Name}}</label>
                 </div>
-                <img class="card-img-top" src="images/img1.png" alt="">
+                <img class="card-img-top" src="{{this.Image}}" alt="">
             </div>
         </div>
-        <div class="col-5 col-lg-3 ">
-            <div class="Cards">
-                <div class="card-body">
-                    <img src="images/princess.png" alt="">
-                <label class="card-title">Princess Party</label>
-                </div>
-                <img class="card-img-top" src="images/img2.png" alt="">
-            </div>
-        </div>
+        {{/each}}
     </div>
 </div>
+
+
+
+
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-2 col-lg-2  selectThemep">
             <p >Price</p>
         </div>
+    {{#each  Themes}}
         <div class="col-5 col-lg-3">
             <div class="form-group  mb-2">
-                <input readonly type="password" class="form-control" id="inputPassword2" placeholder="$199/day">
+                <input readonly type="password" class="form-control" id="inputPassword2" placeholder={{this.Price}}>
             </div>
             <hr class="myhr">
-        </div>
-        <div class="col-5 col-lg-3">
-            <div class="form-group  mb-2">
-            <input readonly type="password" class="form-control" id="inputPassword2" placeholder="$199/day">
-            </div>
-            <hr class="myhr">
-        </div>
-            
+        </div>       
+{{/each}}
     </div>
         
 </div>
+
     <!--2nd-->
+
+
 <div class="container mt-4">
     <div class="row justify-content-center ">
         <div class="col-2 col-lg-2 selectThemep">
             <p>Length</p>
         </div>
+        {{#each  Themes}}
         <div class="col-5 col-lg-3">
             <div class="form-group mb-2">
-                <input readonly type="password" class="form-control" id="inputPassword2" placeholder="90 minutes">
+                <input readonly type="password" class="form-control" id="inputPassword2" placeholder={{this.Length}}>
             </div>
             <hr class="myhr">
         </div>
-                
-        <div class="col-5 col-lg-3">
-            <div class="form-group  mb-2">
-            <input readonly type="password" class="form-control" id="inputPassword2" placeholder="90 minutes">
-            </div>
-            <hr class="myhr">
-        </div>
-                
+         {{/each}}                 
     </div>
             
 </div>
+
     <!--3rd-->
-<div class="container mt-4">
-    <div class="row justify-content-center">
-        <div class="col-2 col-lg-2  selectThemep">
-            <p >Cancellation</p>
-        </div>
-        <div class="col-5 col-lg-3">
-            <div class="form-group  mb-2">
-                <input readonly type="password" class="form-control" id="inputPassword2" placeholder="3 Days Prior">
-            </div>
-            <hr class="myhr">
-        </div>
-                
-        <div class="col-5 col-lg-3">
-            <div class="form-group  mb-2">
-            <input readonly type="password" class="form-control" id="inputPassword2" placeholder="3 Days Prior">
-            </div>
-            <hr class="myhr">
-        </div>
-                
-    </div>
-            
-</div>
-    <!--4th-->
-    
 
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-2 col-lg-2  selectThemep">
             <p >Included</p>
         </div>
+        {{#each  Themes}}
         <div class="col-5 col-lg-3">
             <div class="form-group  mb-2">
-                <textarea readonly  class="form-control " rows="5" id="comment" placeholder="Hosted party with obstacles, referee,all nerf darts provided. Includes drinks,plates, forks, decorations."></textarea>
+                <textarea readonly  class="form-control " rows="5" id="comment" placeholder='{{this.Included}}'></textarea>
         </div>
         <hr class="myhr">
         </div>
-                
-        <div class="col-5 col-lg-3">
-            <div class="form-group  mb-2">
-                <textarea readonly class="form-control" rows="5" id="comment" placeholder="Hosted party with obstacles, referee,all nerf darts provided. Includes drinks,plates, forks, decorations."></textarea>
-            </div>
-            <hr class="myhr">
-        </div>
-                
+        {{/each}}
     </div>
             
 </div>
-    <!--5th-->
+
+    <!--4th-->
+
     <div class="container mt-4">
         <div class="row justify-content-center ">
             <div class="col-2 col-lg-2  selectThemep">
                 <p >Not Included</p>
             </div>
+            {{#each  Themes}}
             <div class="col-5 col-lg-3">
                 <div class="form-group  mb-2">
-                    <input readonly type="password" class="form-control" id="inputPassword2" placeholder="Cake, Party Favors, Nerf Guns">
+                    <input readonly type="password" class="form-control" id="inputPassword2" placeholder='{{this.NotIncluded}}'>
                 </div>
                 <hr class="myhr">
             </div>
-                
-            <div class="col-5 col-lg-3">
-                <div class="form-group mb-2">
-                <input readonly type="password" class="form-control" id="inputPassword2" placeholder="Cake, Party Favors">
-                </div>
-                <hr class="myhr">
-            </div>
-                
+            
+                    {{/each}}
         </div>
             
     </div>
-    <!--6th-->
+
+    <!--5th-->
+
     <div class="container mt-4">
         <div class="row justify-content-center ">
             <div class="col-2 col-lg-2  selectThemep">
                 <p >Min Age</p>
             </div>
+            {{#each  Themes}}
             <div class="col-5 col-lg-3">
                 <div class="form-group  mb-2">
-                    <input readonly type="password" class="form-control" id="inputPassword2" placeholder="5 Years Old">
+                    <input readonly type="password" class="form-control" id="inputPassword2" placeholder={{this.MinAge}}>
                 </div>
                 <hr class="myhr">
             </div>
-                
-            <div class="col-5 col-lg-3">
-                <div class="form-group  mb-2">
-                <input readonly type="password" class="form-control" id="inputPassword2" placeholder="6 Years Old">
-                </div>
-                <hr class="myhr">
-            </div>
-                
+{{/each}}
         </div>
             
     </div>
-    <!--7th-->
+    
+    <!--6th-->
+
     <div class="container mt-4">
             <div class="row justify-content-center">
                 <div class="col-2 col-lg-2  selectThemep">
                     <p >Max Participants</p>
                 </div>
-               
+               {{#each  Themes}}
                 <div class="col-5 col-lg-3">
                 <div class="form-group  mb-2">
-                    <input readonly type="password" class="form-control" id="inputPassword2" placeholder="Unlimited">
+                    <input readonly type="password" class="form-control" id="inputPassword2" placeholder={{this.MaxParticipants}}>
                 </div>
                 <hr class="myhr">
                 </div>
-                
-                <div class="col-5 col-lg-3">
-                <div class="form-group  mb-2">
-                <input readonly type="password" class="form-control" id="inputPassword2" placeholder="14-18">
-                </div>
-                <hr class="myhr">
-                </div>
+       {{/each}}
                 
             
             
         </div>
-    <!--8th-->
+    </div>
+       
+    <!--7th-->
+
     <div class="container mt-4">
-        <div class="row justify-content-center mb-5">
-            <div class="col-2 col-lg-2  selectThemep">
-                <p >Parent Waiver</p>
+        <div class="row justify-content-center mb-5 ml-5">
+    
+             {{#each  Themes}} 
+            <div class="col-5 col-lg-3 ml-3">
+  
+                               <a href="/themeSelected/{{this.Name}}" class="themebtn pt-2 pb-2 btn-block text-center ml-5">SELECT THEME</a>
+               
             </div>
-            <div class="col-5 col-lg-3">
-                <div class="form-group  mb-2">
-                    <input readonly type="password" class="form-control" id="inputPassword2" placeholder="Required. Print Here">
-                    
-                </div>
-                <hr class="myhr mb-4">
-                <a href="/themeSelected/name" class="themebtn pt-2 pb-2 btn-block text-center">SELECT THEME</a>
-                
-            </div>
-                
-            <div class="col-5 col-lg-3">
-                <div class="form-group  mb-2">
-                <input readonly type="password" class="form-control" id="inputPassword2" placeholder="Fill out at venue">
-                
-                </div>
-                <hr class="myhr mb-4">
-                <a href="/themeSelected/name " class="themebtn pt-2 pb-2 btn-block text-center">SELECT THEME</a>
-                
-                </div>
-                
+                 {{/each}}
             </div>
             
         </div>
-      
-  
 
     <script src="./jquery/jquery-3.4.0.min.js"></script>
     <script src="./js/popper.min.js"></script> 
