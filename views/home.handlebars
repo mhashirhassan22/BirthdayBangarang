@@ -55,16 +55,15 @@ input[type='radio']:checked+.checkboxLabel:before {
                 <!-- Login Form -->
                 <form action="/signin" method="POST" class="login-form">
                     <!--email-->
-                <input  type="text" id="login" class="fadeIn second inputPic1" name="Email" placeholder="Email">
+                <input  type="text" id="login" class="fadeIn second inputPic1" name="email" placeholder="Email" required="">
                 <!--Password-->
-                <input  type="text" id="password" class="fadeIn third inputPic2" name="password" placeholder="Password">
+                <input  type="text" id="password" class="fadeIn third inputPic2" name="password" placeholder="Password" required="">
             
                 <!--Sign Up sign IN buttons-->
                 <div class="row justify-content-center">
 
                         <div class="entry">
-                            <input type="submit" value="SignIn" href="#" class="col-10 loginBtn mt-3" style=" color: #FF8100;">
-                           
+                            <input type="submit" value="SignIn" href="#" class="col-10 loginBtn mt-3" style=" color :white;">
                         </div>
                         
                 </div>
@@ -127,11 +126,18 @@ input[type='radio']:checked+.checkboxLabel:before {
     <div class="collapse navbar-collapse  " id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/ContactUs" " >Contact Us</a>
+                <a class="nav-link" href="/ContactUs" >Contact Us</a>
             </li>
- <li class="nav-item">
-                <a class="nav-link white_btn" href="#" onclick="openNav()">Become A Host</a>
- </li>
+            <li class="nav-item">
+                <a class="nav-link white_btn" href="#" onclick="openNav2()">Become A Host</a>    
+            </li>
+            <li class="nav-item">
+                <a id = "login_btn" class="nav-link white_btn" href="#" onclick="openNav()" >Login</a>    
+            </li>
+            <li class="nav-item">
+                <a id = "logout_btn" class="nav-link white_btn" href="#" onclick="testing()" >Logout</a>    
+            </li>
+            
 
            
         </ul>
@@ -176,22 +182,24 @@ input[type='radio']:checked+.checkboxLabel:before {
         </div>
     </div>
 </div>
+
 <div class=" container padding ">
     <div class="row padding">
+         {{#each venues}}
         <div class=" col-6 col-xl-3 col-lg-6 col-md-6">
-            <a class=" Cards" href="/selectTheme">
-                <img class="card-img-top" src="images/img1.png" alt="">
+            <a class=" Cards" href="/selectTheme/{{this.Name}}">
+                <img class="card-img-top" src="{{this.Image}}" alt="">
                 <div class="card-img-overlay">
-                    <p class="card-text price-tag">$190</p>
+                    <p class="card-text price-tag">${{this.Price}}</p>
                 </div>
                 <img src="images/ninja.png" alt="">
-                <label class="card-title mt-1" >Ninja Turtle</label>
-                <p class="card-text"  >Tumbling Studio</p>
+                <label class="card-title mt-1" >{{this.Themes}}</label>
+                <p class="card-text"  >{{this.Name}}</p>
             </a>
-                    
+              
         </div>
-
-        <div class="col-6 col-xl-3 col-lg-6 col-md-6">
+            {{/each}}  
+      <!--  <div class="col-6 col-xl-3 col-lg-6 col-md-6">
             <a class=" Cards" href="/selectTheme">
                 <img class="card-img-top" src="images/img2.png" alt="">
                 <div class="card-img-overlay">
@@ -229,7 +237,7 @@ input[type='radio']:checked+.checkboxLabel:before {
                     <p class="card-text">Skating Rink</p>
                     </div>
                 </a>
-            </div>
+            </div>-->
 
     </div>
 </div>
