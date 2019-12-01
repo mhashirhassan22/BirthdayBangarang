@@ -1,10 +1,11 @@
 const express = require('express');
 const parser = require("body-parser");
 const router = express();
+const exphbs = require('express-handlebars');
 const firebase = require("firebase/app");
 require("firebase/firestore");
 require("firebase/auth");
-
+const app = express();
 
 
 router.use(parser.json());
@@ -14,16 +15,23 @@ var db = firebase.firestore();
 router.post('/signin',(req,res)=>{
 
 
-    firebase.auth().signInWithEmailAndPassword(req.body.Email,req.body.Passowrd).then((cred)=>{
-    console.log(cred);
+    firebase.auth().signInWithEmailAndPassword(req.body.email,req.body.password).then((cred)=>{
+        res.redirect('/changelayouts')
    }).catch(err=>{
         console.log(err);
    });
-
-   res.redirect('/')
+   
+ 
 });
 
-	
+router.get('/logout',(req,res)=>{
+
+
+    firebase.auth().signOut();
+    res.redirect('/changelayouts')
+   
+ 
+});	
 
 
 router.post('/signup',(req,res)=>{

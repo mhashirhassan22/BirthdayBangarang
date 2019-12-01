@@ -1,7 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap-4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/main.js"></script>
+    <title>Home</title>
+    <style>
+  input[type='radio'] {
+  display: none;
+}
+
+.checkboxLabel:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0 5px 0 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 11px;
+  border: 2px solid #FF9A00;
+  background-color: transparent;
+}
+
+input[type='radio']:checked+.checkboxLabel:before {
+  position: relative;
+  border: 2px solid #FF9A00;
+  border-radius: 11px;
+  width: 17px;
+  height: 17px;
+  top: 5px;
+  content: " ";
+  display: inline-block;
+  background-color: #FF9A00;
+}
+    </style>
+</head>
+<body  >
+    <!--Login Form-->
+<div id="nav" class="overlay">
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <a href="#" class="close-btn" onclick="closeNav()">&times;</a>
+                <div class="fadeIn first mt-4">
+                    <h4>Host Login</h4>
+                    <p>Don't have an host account ? <a onclick="openNav2()" style="cursor: pointer;">Sign Up!</a></p>
+                </div>
+                <!-- Login Form -->
+                <form action="/signin" method="POST" class="login-form">
+                    <!--email-->
+                <input  type="text" id="login" class="fadeIn second inputPic1" name="email" placeholder="Email" required="">
+                <!--Password-->
+                <input  type="text" id="password" class="fadeIn third inputPic2" name="password" placeholder="Password" required="">
+            
+                <!--Sign Up sign IN buttons-->
+                <div class="row justify-content-center">
+
+                        <div class="entry">
+                            <input type="submit" value="SignIn" href="#" class="col-10 loginBtn mt-3" style=" color :white;">
+                        </div>
+                        
+                </div>
+            </form> 
+        </div>
+    </div>
+</div>
+    <!--ContactForm-->
+<div id="nav4" class="overlay">
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+                <div class="fadeIn first mt-4">
+            <a href="#" class="close-btn" onclick="closeNav4()">&times;</a>
+                    <h4>Contact US</h4>
+                </div>
+                <input readonly type="text" id="cmail" class="nav-link white_btn" name="infomail" placeholder="abc@gmail.com" required="">
+
+                <input  readonly type="text" id="cno" class="nav-link white_btn" name="infocontact" placeholder="whatsapp" required="">
+                </div>
+            </form> 
+        </div>
+    </div>
+</div>
+<!--Sign Up form-->                     
+<div id="nav2" class="overlay2">
+    <div class="wrapper fadeInDown">
+        <div id="formContent2">
+            <div class="fadeIn first mt-3">
+            <a href="#" class="close-btn" onclick="closeNav2()">&times;</a>
+            <h4>Host Account Creation</h4>
+            <p>Zero cost to sign up + zero monthly fee . You only pay a service fee when a party Is booked</p>
+            </div>
+            <form action="/signup" method="POST" class="signup-form">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-xl-6 col-lg-6 " style="padding-left: 0px !important ; padding-right: 0px !important">
+                        <p>Owner Info </p>
+                        <input  type="text" id="login" class="fadeIn second " name="Name" placeholder="Full Name" required="">
+                        <input  type="text" id="login" class="fadeIn second " name="Passowrd" placeholder="Passowrd" required="">
+                        <input  type="text" id="login" class="fadeIn second " name="CPassword" placeholder="Confirm Password" required="">
+                        <input  type="text" id="login" class="fadeIn second " name="PaypalID" placeholder="Paypal ID" required="">
+                        <input  type="text" id="login" class="fadeIn second " name="BankRouting" placeholder="Bank Routing #" required="">
+                        <input  type="text" id="login" class="fadeIn second " name="CheckingAcct" placeholder="Checking Acct # " required="">
+                    </div>
+                    <div class="col-12 col-xl-6 col-lg-6" style="padding-left: 0px !important ; padding-right: 0px !important">
+                        <p>Location Info</p>
+                        <input  type="text" id="login" class="fadeIn second " name="BusinessName" placeholder="Business Name" required="">
+                        <input  type="text" id="login" class="fadeIn second " name="Address" placeholder="Address" required="">
+                        <input  type="text" id="login" class="fadeIn second " name="City" placeholder="City" required="">
+                        <input  type="text" id="login" class="fadeIn second " name="Phone" placeholder="Phone #" required="">
+                        <input  type="text" id="login" class="fadeIn second " name="Email" placeholder="Email" required="">
+                        <input  type="text" id="login" class="fadeIn second " name="Website" placeholder="Website" required="">
+                    </div>
+                    <div class="col-12 form-check ">
+                            <div class="radio">
+                                    <input id="terms" type="radio" name="services" value="terms">
+                                    <label class="checkboxLabel" for="terms" style="font-size: 12px; color: #FF9A00; margin-top: 2px;">I agree to <span style="color: #FF9A00;text-decoration:underline">Term of Services</span></label>
+                                   
+                                  </div>
+                    </div>
+                    <input type="submit" value="SIGN UP" href="#"class="col-11 loginBtn mt-1" style=" color: #FF8100;">
+                </div>
+            </form> 
+        </div>
+    </div>
+</div>
+<!--nav-->
+<nav class="navbar navbar-expand-md navbar-light bg-md-light"  >
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#"><h4>Bangarang Birthdays</h4></a>
+    </div>
+    <button class="navbar-toggler ml-auto"  type="button"  data-toggle="collapse" data-target="#navbarResponsive">
+    <span class="navbar-toggler-icon float-right"></span>
+    </button>
+    <div class="collapse navbar-collapse  " id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link white_btn" href="#" onclick="openNav4()" >Contact Us</a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link white_btn" href="#" onclick="openNav2()">Become A Host</a>    
+            </li>
+            <li class="nav-item">
+                <a id = "login_btn" class="nav-link white_btn" href="#" onclick="openNav()" >Login</a>    
+            </li>
+        </ul>
+    </div>
+</nav>
     {{{body}}}
-</body>
 
 </html>

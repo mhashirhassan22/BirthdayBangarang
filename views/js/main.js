@@ -10,7 +10,6 @@ function openNav(){
     document.getElementById('nav').style.height="100%";
 }
 function closeNav(){
-    testing();
     document.getElementById('nav').style.height="0%";
 }
 
@@ -32,6 +31,21 @@ function closeNav2(){
     document.getElementById('nav2').style.height="0%";
 }
 
+function openNav4(){
+    document.getElementById('nav4').style.width="100%";
+
+
+}
+function closeNav4(){
+    document.getElementById('nav4').style.width="0%";
+
+}
+function openNav4(){
+    document.getElementById('nav4').style.height="100%";
+}
+function closeNav4(){
+    document.getElementById('nav4').style.height="0%";
+}
 function testing(){
     if(logged_in){
         document.getElementById("login_btn").style.display="none";

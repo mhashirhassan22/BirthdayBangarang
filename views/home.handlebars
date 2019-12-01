@@ -43,132 +43,41 @@ input[type='radio']:checked+.checkboxLabel:before {
     </style>
 </head>
 <body id="homeBg" >
-    <!--Login Form-->
-<div id="nav" class="overlay">
-    <div class="wrapper fadeInDown">
-        <div id="formContent">
-            <a href="#" class="close-btn" onclick="closeNav()">&times;</a>
-                <div class="fadeIn first mt-4">
-                    <h4>Host Login</h4>
-                    <p>Don't have an host account ? <a onclick="openNav2()" style="cursor: pointer;">Sign Up!</a></p>
-                </div>
-                <!-- Login Form -->
-                <form action="/signin" method="POST" class="login-form">
-                    <!--email-->
-                <input  type="text" id="login" class="fadeIn second inputPic1" name="email" placeholder="Email" required="">
-                <!--Password-->
-                <input  type="text" id="password" class="fadeIn third inputPic2" name="password" placeholder="Password" required="">
-            
-                <!--Sign Up sign IN buttons-->
-                <div class="row justify-content-center">
 
-                        <div class="entry">
-                            <input type="submit" value="SignIn" href="#" class="col-10 loginBtn mt-3" style=" color :white;">
-                        </div>
-                        
-                </div>
-            </form> 
-        </div>
-    </div>
-</div>
-<!--Sign Up form-->                     
-<div id="nav2" class="overlay2">
-    <div class="wrapper fadeInDown">
-        <div id="formContent2">
-            <div class="fadeIn first mt-3">
-            <a href="#" class="close-btn" onclick="closeNav2()">&times;</a>
-            <h4>Host Account Creation</h4>
-            <p>Zero cost to sign up + zero monthly fee . You only pay a service fee when a party Is booked</p>
-            </div>
-            <form action="/signup" method="POST" class="signup-form">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-xl-6 col-lg-6 " style="padding-left: 0px !important ; padding-right: 0px !important">
-                        <p>Owner Info </p>
-                        <input  type="text" id="login" class="fadeIn second " name="Name" placeholder="Full Name">
-                        <input  type="text" id="login" class="fadeIn second " name="Passowrd" placeholder="Passowrd">
-                        <input  type="text" id="login" class="fadeIn second " name="CPassword" placeholder="Confirm Password">
-                        <input  type="text" id="login" class="fadeIn second " name="PaypalID" placeholder="Paypal ID">
-                        <input  type="text" id="login" class="fadeIn second " name="BankRouting" placeholder="Bank Routing #">
-                        <input  type="text" id="login" class="fadeIn second " name="CheckingAcct" placeholder="Checking Acct # ">
-                    </div>
-                    <div class="col-12 col-xl-6 col-lg-6" style="padding-left: 0px !important ; padding-right: 0px !important">
-                        <p>Location Info</p>
-                        <input  type="text" id="login" class="fadeIn second " name="BusinessName" placeholder="Business Name">
-                        <input  type="text" id="login" class="fadeIn second " name="Address" placeholder="Address">
-                        <input  type="text" id="login" class="fadeIn second " name="City" placeholder="City">
-                        <input  type="text" id="login" class="fadeIn second " name="Phone" placeholder="Phone #">
-                        <input  type="text" id="login" class="fadeIn second " name="Email" placeholder="Email">
-                        <input  type="text" id="login" class="fadeIn second " name="Website" placeholder="Website">
-                    </div>
-                    <div class="col-12 form-check ">
-                            <div class="radio">
-                                    <input id="terms" type="radio" name="services" value="terms">
-                                    <label class="checkboxLabel" for="terms" style="font-size: 12px; color: #FF9A00; margin-top: 2px;">I agree to <span style="color: #FF9A00;text-decoration:underline">Term of Services</span></label>
-                                   
-                                  </div>
-                    </div>
-                    <input type="submit" value="SIGN UP" href="#"class="col-11 loginBtn mt-1" style=" color: #FF8100;">
-                </div>
-            </form> 
-        </div>
-    </div>
-</div>
-<!--nav-->
-<nav class="navbar navbar-expand-md navbar-light bg-md-light"  >
-    <div class="container-fluid">
-    <a class="navbar-brand" href="#"><h4>Bangarang Birthdays</h4></a>
-    </div>
-    <button class="navbar-toggler ml-auto"  type="button"  data-toggle="collapse" data-target="#navbarResponsive">
-    <span class="navbar-toggler-icon float-right"></span>
-    </button>
-    <div class="collapse navbar-collapse  " id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/ContactUs" >Contact Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link white_btn" href="#" onclick="openNav2()">Become A Host</a>    
-            </li>
-            <li class="nav-item">
-                <a id = "login_btn" class="nav-link white_btn" href="#" onclick="openNav()" >Login</a>    
-            </li>
-            <li class="nav-item">
-                <a id = "logout_btn" class="nav-link white_btn" href="#" onclick="testing()" >Logout</a>    
-            </li>
-            
-
-           
-        </ul>
-    </div>
-</nav>
-    
 <!--header-->
 <div class="heading">
     <h1>Rent a birthday party venue</h1>
     <p>Planning & Booking your Child's Birthday Should be Easy!</p>
 </div>
-<!--How far where section-->
+<!--How far where section
 <div class="container headingbtn" >
     <div class="row justify-content-center">
+        <form action="/search" method="GET">
         <div class="col-10 col-xl-8 col-lg-8 col-md-8  input-group" id="WhereHow" >
             <i class="fas fa-map-marker-alt" id="location"></i>
-             <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Where ?" id="inputID">
-            <span>|</span>
-            <i class="fas fa-car" id="car"></i>
-            <div class="input-group-append">
-                <button class="btn  dropdown-toggle" id="dropdownbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">How Far ?</button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    <div role="separator" class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Separated link</a>
-                </div>
+             <input  type="text" id="login" class="fadeIn second " name="search" placeholder="Name">
             </div>
-        </div> 
-            <a href="#" class="col-3 blue_btn text-center" id="search">SEARCH</a>
+                    <input type="submit" value="Search" href="#"class="col-11 loginBtn mt-1" style=" color: #blue;">
+            
+            </form>
     </div>
-</div>
+</div>-->
+<div class="row justify-content-center mt-5">
+    
+ <div id="formContent">
+                <form action="/search" method="POST" class="login-form">
+                
+                <input  type="text" id="Search" class="mt-3" name="vName" placeholder="Venue Name" required="">
+                <div class="row justify-content-center">
+
+                        <div class="entry">
+                            <input type="submit" value="Search" class="col-10 loginBtn mt-3" style=" color :white;">
+                        </div>
+                        
+                </div>
+            </form> 
+        </div>
+ </div>
 <!--Featured venues-->
 
 <div class="container ">

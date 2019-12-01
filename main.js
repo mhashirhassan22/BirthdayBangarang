@@ -26,13 +26,16 @@ var db = firebase.firestore();
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
+//app.set('view options', { layout: 'other' });
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 
 app.get('/', (req, res) => {
 
-
+  
+  Themes=[];
   let venueRef = db.collection('venue');
   let Allvenues = venueRef.get()
     .then(snapshot => {
@@ -52,6 +55,20 @@ app.get('/', (req, res) => {
     });
 
 });
+app.get('/changelayouts', (req, res) => {
+
+  if(layout==0)
+  {
+    app.engine('handlebars', exphbs({ defaultLayout: 'Host' }));
+    layout=1;
+  }
+  else{
+    app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+    layout=0;
+  }
+  res.redirect('/')
+
+});
 
 app.get('/ContactUs', (req, res) => {
 
@@ -59,45 +76,62 @@ app.get('/ContactUs', (req, res) => {
   res.render('ContactUs')
 });
 
+app.post('/search', (req, res) => {
+
+  search=venues.filter(venue => venue.Name.toUpperCase().includes(req.body.vName.toUpperCase()))
+  console.log(search);
+  res.render('home', { venues: search })
+
+});
+const getthemes = (req, res) => {
+  
+};
 
 app.get('/selectTheme/:name', (req, res) => {
 
+        
   let ThemesRef = db.collection('venue').doc(req.params.name);
   let getDoc = ThemesRef.get()
     .then(doc => {
       
    
         venue = doc.data();
- 
-        for (var i = 0, len = venue.Themes.length; i < len; i++) {             
+        
+        for (var i = 0, len = venue.Themes.length; i < len; i++) 
+        {             
         let ThemeRef = db.collection('themes').doc(venue.Themes[i]);
         let getDoc = ThemeRef.get()
           .then(doc => {
-          
+              
               Themes.push(doc.data())  
+              console.log(Themes.length)
+              console.log(venue.Themes.length)
+             if(Themes.length===venue.Themes.length)
+             {
+              res.redirect('/selectTheme') 
+             };
 
           })     
           .catch(err => {
             console.log('Error getting document', err);
           });
+          
         }
-
-    
-      
+              
+        
     })
     .catch(err => {
       console.log('Error getting document', err);
-    }).then(doc => {
-      console.log(Themes);
-      res.redirect('/selectTheme')
-  }
-  );
+    })
+
+ 
+  
 
 })
 app.get('/selectTheme', (req, res) => {
 
-
   res.render('selectTheme',{venue,Themes})
+  Themes=[];
 });
 
 
@@ -158,9 +192,11 @@ var flag = 0;
 var names = 'Tumbling';
 
 
-const venues = [];
-
+var venues = [];
+var search=[];
 var venue = {};
 var Themes=[];
 var theme={};
 var user={};
+var layout=0;
+var loaded=0;
