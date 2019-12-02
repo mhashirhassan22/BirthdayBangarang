@@ -295,11 +295,7 @@ app.get('/DeleteTheme/:name', (req, res) => {
     .catch(err => {
       console.log('Error getting document', err);
     }).then(doc => {
-        var Dtheme = venue.Themes.filter(theme => theme.Name!=theme.Name);
-        let venueRef = db.collection('venue').doc(venue.Name);
-        let setWithOptions = venueRef.set({
-        Themes: [Dtheme]
-      }, {merge: true});
+      "venue": firebase.firestore.FieldValue.arrayRemove({"0":theme.Name})
           res.redirect('/Host')
 
     });
