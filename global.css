@@ -1,0 +1,274 @@
+@font-face {
+    font-family:AvenirBold ;
+    src: url(AvenirNextLTPro-Bold.otf);
+}
+@font-face {
+    font-family:AvenirReg;
+    src: url(AvenirNextLTPro-Regular.otf);
+}
+#just-line-break {
+    white-space: pre-line;
+  }
+  
+  #line-break-and-tab {
+    white-space: pre-wrap;
+  }
+/*navbar*/
+.navbar{
+    padding: .8rem;
+  }
+  .navbar-brand h4{
+      color: white;
+  }
+  .navbar-nav li{
+   padding-right: 20px;
+   
+  }
+   .nav-link{
+      color: white !important;
+  }
+ 
+  .navbar-light .navbar-toggler{
+      border-color:black ;
+      margin-top: -40px;
+      padding: 2px 5px !important;
+  }
+  .navbar-toggler-icon{
+     
+  }
+.white_btn{
+    background-color: white;
+    border-radius: 50px;
+    color: #FF8100 !important;
+    padding: 7px 20px !important;
+    font-size: 14px;
+    text-decoration: none;
+
+}
+.blue_btn{
+    background-color: #00C4FF;
+    border-radius: 50px;
+    color:  white !important;
+   padding-top: 5px;
+    font-size: 13px;
+    text-decoration: none;
+
+}
+.backbtn{
+    background-color: rgb(255, 131, 0, 0.2);
+    padding: 7px 17px;
+    font-size: 12px;
+    
+    text-decoration: none;
+    color: #FF8100;
+    border-radius: 50px;
+}
+
+.FAQbtn{
+    background-color: #ff9800;
+    padding: 7px 15px;
+    font-size: 12px;
+    
+    text-decoration: none;
+    color: white;
+    border-radius: 50px;
+}
+.backbtntheme{
+    background-color: rgb(0, 196, 225, 0.3);
+    padding: 5px 10px;
+    font-size: 14px;
+   
+    text-decoration: none;
+    color: #FF8300;
+    border-radius: 50px;
+}
+
+.PayBook{
+    background-color: #00C4FF;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+   margin-top: 70px;
+    text-align: center;
+}
+:root {
+    --mainColor: #ff9800;
+    --mainColor2: #00C4FF;
+  }
+ .backbtntheme:hover, .PayBook:hover{
+    background:
+    linear-gradient(
+      to right,
+      var(--mainColor) 0%,
+      var(--mainColor) 5px,
+      transparent
+      
+    );
+    color: white;
+    text-decoration: none !important;
+}
+ .backbtn:hover{
+    background:
+    linear-gradient(
+      to right,
+      var(--mainColor2) 0%,
+      var(--mainColor2) 5px,
+      transparent
+      
+    );
+    color: white;
+ }
+ .blue_btn:hover{
+     color: white;
+     text-decoration: none;
+ }
+ 
+
+.fa-map-marker-alt, .fa-car{
+    color: #00C4FF;
+    font-size: 16px;
+}
+/*responsvess*/
+@media screen and (min-width:320px) and (max-width:480px){
+    .feature .mt-4{
+        margin-top: 0px !important;
+    }
+    #homeBg{
+      
+        background-image: url(../images/phoneBg.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+    }
+   
+   
+.navbar-nav li{
+    padding-right: 5px;
+    
+   }
+   .navbar-brand h4{
+       font-size: 22px;
+   }
+   .white_btn{
+       background-color: transparent;
+      
+       
+       padding: 7px 0px !important;
+   }
+  .nav-link{
+      font-size: 16px !important;
+      color: black !important;
+  }
+  .heading{
+      margin-top: 3%;
+  }
+  .heading h1{
+      font-size: 30px;
+      padding: 5px;
+  }
+  .heading p{
+      font-size: 13px;
+  }
+#search{
+    margin-left: 0px;
+    margin-top: 10px;
+    
+}
+.blue_btn{
+    padding: 5px 10px;
+}
+
+  #WhereHow{
+      margin-left: 10px;
+  } 
+  .headingbtn{
+      margin-top: 10%;
+  }
+  .feature{
+      margin-top: 25%;
+  }
+    
+
+
+    
+}
+@media screen and (max-width : 1025px ){
+
+    .heading h1{
+      
+        
+    }
+    /*
+    .heading p,#dropdownbtn,#inputID,.fa-map-marker-alt, .fa-car ,.headingbtn span,.dropdown-item,.blue_btn,.feature p   {
+      
+        font-size: 30px;
+    }
+    .feature h5 {
+        font-size: 40px;
+    }
+   
+    #car,#location{
+        margin-top: 11px;
+    }
+    h4{
+        font-size:3.5rem;
+    }
+    .navbar-light .navbar-nav .nav-link{
+        font-size:2rem;
+    }
+    .feature img{
+        width: 50px;
+    }*/
+   
+   
+}
+@media screen and (max-width: 1024px) and (min-width: 479px) { 
+    .feature .mt-4{
+        margin-top: 0px !important;
+    }
+    
+    #homeBg{
+        background-image: url(../images/ipadbg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+       
+        }
+        .feature{
+            margin-top: 20%;
+        }
+        .feature p{
+            font-size: 20px;
+        }
+        .card-title{
+            font-size: 20px;
+        }
+        .card-text{
+            font-size: 18px;
+        }
+        .nav-link{
+            font-size: 22px;
+        }
+        .navbar-brand h4{font-size: 30px;}
+        .feature h5{
+font-size: 30px;
+        }
+        .heading h1{
+            font-size: 45px;
+            margin-left: 70px;
+        }
+        .heading p{
+            font-size: 22px;
+        }
+        #inputID, #dropdownbtn{
+            font-size: 20px;
+        }
+        .blue_btn, .white_btn{
+            font-size: 19px;
+        }
+        .fa-map-marker-alt, .fa-car {
+            font-size: 20px;
+        }
+        .headingbtn span{
+            margin-top: 5px;
+        }
+}
