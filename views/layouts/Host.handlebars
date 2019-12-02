@@ -59,6 +59,40 @@ input[type='radio']:checked+.checkboxLabel:before {
         </div>
     </div>
 </div>
+<!--Host A Venue form-->                     
+<div id="nav3" class="overlay2">
+    <div class="wrapper fadeInDown">
+        <div id="formContent2">
+            <div class="fadeIn first mt-3">
+            <a href="#" class="close-btn" onclick="closeNav3()">&times;</a>
+            <h4>Host A Venue</h4>
+            </div>
+            <form action="/Host" method="POST" class="signup-form">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-xl-6 col-lg-6 " style="padding-left: 0px !important ; padding-right: 0px !important">
+                        <p>Venue Info </p>
+                        <input  type="text" id="login" class="fadeIn second " name="Name" placeholder="Venue Name" required="">
+                        <input  type="text" id="login" class="fadeIn second " name="Price" placeholder="Price" required="">
+                        <input  type="text" id="login" class="fadeIn second " name="Discription" placeholder="Discription" required="">
+                        </div>
+                    <div class="col-12 col-xl-6 col-lg-6" style="padding-left: 0px !important ; padding-right: 0px !important">
+                        <p>Location Info</p>
+                        <input  type="text" id="login" class="fadeIn second " name="Address" placeholder="Address" required="">
+                        <input  type="text" id="login" class="fadeIn second " name="City" placeholder="City" required="">
+                    </div>
+                    <div class="col-12 form-check ">
+                            <div class="radio">
+                                    <input id="terms" type="radio" name="services" value="terms">
+                                    <label class="checkboxLabel" for="terms" style="font-size: 12px; color: #FF9A00; margin-top: 2px;">I agree to <span style="color: #FF9A00;text-decoration:underline">Term of Services</span></label>
+                                   
+                                  </div>
+                    </div>
+                    <input type="submit" value="Host" href="#"class="col-11 loginBtn mt-1" style=" color: #FF8100;">
+                </div>
+            </form> 
+        </div>
+    </div>
+</div>
 <!--nav-->
 <nav class="navbar navbar-expand-md navbar-light bg-md-light"  >
     <div class="container-fluid">
@@ -73,8 +107,18 @@ input[type='radio']:checked+.checkboxLabel:before {
                 <a class="nav-link white_btn" href="#" onclick="openNav4()" >Contact Us</a> 
             </li>
             <li class="nav-item">
+                        <a class="nav-link white_btn" href="#" onclick="openNav3()">Host A Venue </a> 
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link active white_btn" href="#">Booked Parties </a> 
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link white_btn" href="#">Venues</a> 
+                </li>
+            <li class="nav-item">
                 <a id = "login_btn" class="nav-link white_btn" href="/logout" >Logout</a>    
             </li>
+
         </ul>
     </div>
 </nav>

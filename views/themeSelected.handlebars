@@ -50,7 +50,7 @@
         <div class="col-12 col-lg-5 col-xl-5 col-md-6 venue ">
             <p class="title" style="font-size: 13px;margin-bottom: 0px;">VENUE</p>
             <h4 class="text-center">{{venue.Name}}</h4>
-            <p class="subTitle" style="color: black;">{{user.Adderss}}<span class="seprator"> | </span>  {{user.Phone}} <span  class="seprator"> | </span><span class="link">{{user.Website}}</span></p>
+            <p class="subTitle" style="color: black;">{{venue.Adderss}}<span class="seprator"> | </span>  {{user.Phone}} <span  class="seprator"> | </span><span class="link">{{user.Website}}</span></p>
                 
         </div>
         <div class="col-12 col-lg-3 col-xl-3 col-md-3 text-center " style="margin-top: 20px">
@@ -78,11 +78,11 @@
             </div>      
         </div>
         <div class="col-12 col-lg-4 col-xl-3 col-md-5 pl-4 ">
-            <form>
+            <form action="/Payment" method="POST">
                 <div class="form-row pb-2">
                     <div class="form-group1 col-md-6 col-6">
                         <label for="inputEmail4">Where ?</label>
-                        <input type="email" class="form-control1 col-lg-12" id="inputEmail4" placeholder="Enter City">
+                        <input type="text" class="form-control1 col-lg-12" id="inputEmail4" placeholder="Enter City">
                     </div>
 
                     <div class="form-group1 col-md-6 col-6">
@@ -134,7 +134,7 @@
                                         <div class="card-body">
                                                 <img src="images/ninja.png" alt="">
                                                 <label class="card-title">{{theme.Name}}</label>
-                                                <a href="#" class="col-3 change float-right mt-1">Change</a>
+                                                <a href="/selectTheme/{{venue.Name}}" class="col-3 change float-right mt-1">Change</a>
 
                                             </div>
                                        

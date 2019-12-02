@@ -16,7 +16,7 @@ router.post('/signin',(req,res)=>{
 
 
     firebase.auth().signInWithEmailAndPassword(req.body.email,req.body.password).then((cred)=>{
-        res.redirect('/changelayouts')
+        res.redirect('/changelayouts/'+req.body.email)
    }).catch(err=>{
         console.log(err);
    });

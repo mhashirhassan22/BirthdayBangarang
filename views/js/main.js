@@ -46,16 +46,19 @@ function openNav4(){
 function closeNav4(){
     document.getElementById('nav4').style.height="0%";
 }
-function testing(){
-    if(logged_in){
-        document.getElementById("login_btn").style.display="none";
-        document.getElementById("logout_btn").style.display="block";
-        logged_in = !logged_in;
-    }
-    else{
-        document.getElementById("login_btn").style.display="block";
-        document.getElementById("logout_btn").style.display="none";
-        logged_in = !logged_in;
-    }
 
+function openNav3(){
+    document.getElementById('nav3').style.width="100%";
+
+
+}
+function closeNav3(){
+    document.getElementById('nav3').style.width="0%";
+
+}
+function openNav3(){
+    document.getElementById('nav3').style.height="100%";
+}
+function closeNav3(){
+    document.getElementById('nav3').style.height="0%";
 }
