@@ -36,6 +36,10 @@ router.get('/logout',(req,res)=>{
 
 router.post('/signup',(req,res)=>{
 
+    
+	var auth = firebase.auth();
+    auth.createUserWithEmailAndPassword(req.body.Email,req.body.Passowrd).then((cred)=>{
+    console.log(cred);
     let docRef = db.collection('users').doc(req.body.Name);
     let setAda = docRef.set({
         Name: req.body.Name,
@@ -50,9 +54,6 @@ router.post('/signup',(req,res)=>{
         Email: req.body.Email,
         Website: req.body.Website
     });
-	var auth = firebase.auth();
-    auth.createUserWithEmailAndPassword(req.body.Email,req.body.Passowrd).then((cred)=>{
-    console.log(cred);
     }).catch(err=>{
      console.log(err);
     });

@@ -5,6 +5,7 @@ const firebase = require("firebase/app");
 require("firebase/firestore");
 require("firebase/auth");
 const app = express();
+const uuid=require('uuid');
 
 const firebaseConfig = {
   apiKey: "AIzaSyCtCT7Et6ukWw6Alok-PYzWg3ZK7s9x9pk",
@@ -116,9 +117,24 @@ app.get('/ContactUs', (req, res) => {
 
 app.post('/search', (req, res) => {
 
-  search=venues.filter(venue => venue.Name.toUpperCase().includes(req.body.vName.toUpperCase()))
-  console.log(search);
-  res.render('home', { venues: search })
+  if(req.body.vName==="")
+  {
+    search=Allvenues.filter(venue => venue.City.toUpperCase().includes(req.body.vCity.toUpperCase()))
+    res.render('home', { venues: search })
+  }
+  else if(req.body.vCity==="")
+  {
+    search=Allvenues.filter(venue => venue.Name.toUpperCase().includes(req.body.vName.toUpperCase()))
+    res.render('home', { venues: search })
+  }
+  else if(req.body.vCity==="" && req.body.vName==="")
+  {
+      res.render('home', { venues: Allvenues})
+  }
+  else
+  {
+    search=Allvenues.filter(venue => venue.City.toUpperCase().includes(req.body.vCity.toUpperCase()) && venue.Name.toUpperCase().includes(req.body.vName.toUpperCase()))
+  }
 
 });
 const getthemes = (req, res) => {
@@ -181,7 +197,7 @@ app.get('/hostTheme/:name', (req, res) => {
               Themes.push(doc.data())  
               console.log(Themes.length)
               console.log(venue.Themes.length)
-             if(Themes.length===venue.Themes.length)
+             if(Themes.length===venue.Themes.length  ||  venue.Themes.length===0)
              {
                 res.redirect('/hostTheme')
 
@@ -193,7 +209,11 @@ app.get('/hostTheme/:name', (req, res) => {
           });
           
         }
-              
+        if(venue.Themes.length===0)
+        {
+           res.redirect('/hostTheme')
+
+        };    
         
     })
     .catch(err => {
@@ -225,8 +245,7 @@ app.get('/themeSelected/:name', (req, res) => {
     .catch(err => {
       console.log('Error getting document', err);
     }).then(doc => {
-      if(layout==0)
-      {
+    
       let ThemeRef = db.collection('users').doc(venue.Owner);
       let getDoc = ThemeRef.get()
         .then(doc => {
@@ -237,21 +256,29 @@ app.get('/themeSelected/:name', (req, res) => {
         .catch(err => {
           console.log('Error getting document', err);
         })
-      }
-      else
-      {
-        let venueRef = db.collection('venue').doc(venue.Name);
-        let setWithOptions = venueRef.set({
-        Themes: [venue.Themes[0],theme.Name]
-      }, {merge: true});
-          res.redirect('/Host')
-      }
     });
 
 });
+app.get('/AddTheme/:name', (req, res) => {
 
+  
+        if(venue.Themes.length===0)
+        {
+          let venueRef = db.collection('venue').doc(venue.Name);
+          let setWithOptions = venueRef.set({
+            Themes: [theme.Name]
+          }, { merge: true });
+        }
+        else
+        {
+          let venueRef = db.collection('venue').doc(venue.Name);
+          let setWithOptions = venueRef.set({
+            Themes: [venue.Themes[0], theme.Name]
+          }, { merge: true });
+        }
+          res.redirect('/Host')
 
-
+});
 
 app.get('/themeSelected', (req, res) => {
 
@@ -260,7 +287,38 @@ app.get('/themeSelected', (req, res) => {
 
 app.post('/Payment', (req, res) => {
 
-  res.render('payment')
+  console.log(req.body.date)
+  Booking={
+    Email: req.body.email,
+    Pname: req.body.pname,
+    Cname: req.body.cname,
+    Phone: req.body.phone,
+    Date:  req.body.date,
+    Price: venue.Price+theme.Price,
+    Venue: venue.Name,
+    Theme: theme.Name
+  }
+  console.log(Booking)
+  res.render('payment',{venue,Booking,user})
+});
+
+
+app.get('/final', (req, res) => {
+
+  var id=uuid.v4();
+    let docRef = db.collection('Booking').doc(id);
+  let setAda = docRef.set({
+      ID:   id,
+      Email: Booking.Email,
+       Pname: Booking.Pname,
+        Cname: Booking.Cname,
+        Phone: Booking.Phone,
+       Date:  Booking.Date,
+        Price: Booking.Price,
+       Venue: Booking.Venue,
+        Theme: Booking.Theme
+  })
+  res.redirect('/')
 });
 
 app.use('/', require('./routes/Authentication'))
@@ -285,21 +343,17 @@ app.post('/Host',(req,res)=>{
 });
 app.get('/DeleteTheme/:name', (req, res) => {
 
-  let ThemeRef = db.collection('themes').doc(req.params.name);
-  let getDoc = ThemeRef.get()
-    .then(doc => {
-
-      theme = doc.data();
-      console.log(doc.data());
-    })
-    .catch(err => {
-      console.log('Error getting document', err);
-    }).then(doc => {
-      "venue": firebase.firestore.FieldValue.arrayRemove({"0":theme.Name})
+  var temp=[];
+  temp= venue.Themes;
+  temp.splice( temp.indexOf('req.params.body'), 1 );
+  console.log(temp);
+  let venueRef = db.collection('venue').doc(venue.Name);
+  let setWithOptions = venueRef.set({
+      Themes: temp
+      }, {merge: true});
           res.redirect('/Host')
-
-    });
-})
+      
+ });
 app.get('/Themes/:name', (req, res) => {
 
   let ThemeRef = db.collection('themes');
@@ -337,3 +391,4 @@ var theme={};
 var user={};
 var layout=0;
 var currentuser={};
+var Booking={};

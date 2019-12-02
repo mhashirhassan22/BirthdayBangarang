@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="css/selectTheme.css">
     <link rel="stylesheet" href="css/mycalender.css">
     <link rel="stylesheet" href="css/global.css">
+    <link href='dist/rome.css' rel='stylesheet' type='text/css' />
+    <link href='example/example.css' rel='stylesheet' type='text/css' />
     <title>Theme Selected</title>
     <style>
             body { background-color: #fafafa; }
@@ -62,70 +64,42 @@
     <!--calendar-->
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-12 col-xl-3 col-lg-4 col-md-5   text-center"  style="background-color: white;  box-shadow:10px 10px 10px rgb(214, 214, 214); ">
-            <div id="calendar" class=" "  >
-                   
-            </div>
-            <div class="container">
-                <div class="row  mt-2 text-center ">
-                    <div class="col-12">
-                        <i class="fas fa-circle red "></i> <label style="color: #EF4040; font-size: 12px;" class="mr-4">Full</label>
-                        <i class="fas fa-circle green "></i> <label style=" color: #37c64f; font-size: 12px;" class="mr-4" >Available</label>
-                        <i class="fas fa-circle blue"></i> <label style="color: #00BAFF; font-size: 12px;"class="">Selected</label>
-                        
-                    </div>
-                </div>
-            </div>      
-        </div>
-        <div class="col-12 col-lg-4 col-xl-3 col-md-5 pl-4 ">
-            <form action="/Payment" method="POST">
+     <form action="/Payment" method="POST">
+                
+ 
                 <div class="form-row pb-2">
                     <div class="form-group1 col-md-6 col-6">
-                        <label for="inputEmail4">Where ?</label>
-                        <input type="text" class="form-control1 col-lg-12" id="inputEmail4" placeholder="Enter City">
+                        <label for="inputEmail4">Email</label>
+                        <input type="text" class="form-control1 col-lg-12" id="inputEmail4" name="email" placeholder="Enter Email">
                     </div>
 
                     <div class="form-group1 col-md-6 col-6">
-                        <label for="inputPassword4">Appointment Time</label>
-                        <input type="text" class="form-control1 col-lg-12" id="inputPassword4" placeholder="Enter Time">
+                        <label for="inputEmail4">Parent Name</label>
+                         <input type="text" class="form-control1 col-lg-12" id="inputEmail4" name="pname" placeholder="Parent Name">
+                 
                     </div>
                 </div>
-                    <div class="form-row">
-                        <div class="form-group1 col-md-12 col-12">
-                            <label for="inputState">Child Turns</label>
-                            <select id="inputState" class="form-control1 col-12">
-                              <option selected>Choose</option>
-                              <option>7 years Old</option>
-                              <option>14 years Old</option>
-                              <option>15 years Old</option>
-                            </select>
-                          </div>
-                    </div>
+                    
                     <div class="form-row">
                         <div class="form-group1 col-6 col-md-6">
                         <label for="inputEmail4">Child Name</label>
-                        <input type="email" class="form-control1 col-lg-12" id="inputEmail4" placeholder="Child Name">
+                        <input type="text" class="form-control1 col-lg-12" id="inputEmail4" name="cname" placeholder="Child Name">
                         </div>
 
                         <div class="form-group1 col-6 col-md-6">
-                        <label for="inputPassword4">Parent Name</label>
-                        <input type="text" class="form-control1 col-lg-12" id="inputPassword4" placeholder="Parent Name">
+                        <label for="inputEmail4">Phone</label>
+                         <input type="text" class="form-control1 col-lg-12" id="inputEmail4" name="phone"  placeholder="123-345677">
                         </div>
                     </div>
-
                     <div class="form-group1 ">
-                        <label for="inputAddress">Email</label>
-                        <input type="email" class="form-control1 col-lg-12" id="inputAddress" placeholder="abc@domain.com">
+                        <label for="inputEmail4">Appointment Day</label>
+                         
                     </div>
-                    <div class="form-group1 ">
-                        <label for="inputAddress">Phone</label>
-                        <input type="text" class="form-control1 col-lg-12" id="inputAddress" placeholder="123-345677">
-                    </div>
+                       <input id='dt' class='input' name="date" />
                      <div class="entry">
                             <input type="submit" value="PAY & BOOK PARTY" href="#" class="col-10 loginBtn mt-3 ml-4" style=" color :Blue;">
                         </div>
-                </form>
-            </div>
+              </form>
             <div class="col-12 col-lg-6 col-xl-3 col-md-6 ">
                     <div class="container" >
                             <div class="row  justify-content-center">
@@ -157,12 +131,12 @@
     <script src="jquery/jquery-3.4.0.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="bootstrap-4/js/bootstrap.min.js"></script>
-
     <script src='https://npmcdn.com/react@15.3.0/dist/react.min.js'></script>
     <script src='https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js'></script>
-    
         <script src="js/index.js"></script>
+            <script src='dist/rome.js'></script>
+    <script src='example/example.js'></script>
 </body>
 
 </html>
