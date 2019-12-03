@@ -71,14 +71,14 @@ input[type='radio']:checked+.checkboxLabel:before {
                 <div class="row justify-content-center">
                     <div class="col-12 col-xl-6 col-lg-6 " style="padding-left: 0px !important ; padding-right: 0px !important">
                         <p>Venue Info </p>
-                        <input  type="text" id="login" class="fadeIn second " name="Name" placeholder="Venue Name" required="">
+                        <input  type="text" id="login" class="fadeIn second " name="Name" placeholder="Venue Name" required="" >
                         <input  type="text" id="login" class="fadeIn second " name="Price" placeholder="Price" required="">
-                        <input  type="text" id="login" class="fadeIn second " name="Discription" placeholder="Discription" required="">
                         </div>
                     <div class="col-12 col-xl-6 col-lg-6" style="padding-left: 0px !important ; padding-right: 0px !important">
                         <p>Location Info</p>
                         <input  type="text" id="login" class="fadeIn second " name="Address" placeholder="Address" required="">
                         <input  type="text" id="login" class="fadeIn second " name="City" placeholder="City" required="">
+                        <input type="file" name="myFile" required="">
                     </div>
                     <div class="col-12 form-check ">
                             <div class="radio">
@@ -96,7 +96,7 @@ input[type='radio']:checked+.checkboxLabel:before {
 <!--nav-->
 <nav class="navbar navbar-expand-md navbar-light bg-md-light"  >
     <div class="container-fluid">
-    <a class="navbar-brand" href="#"><h4>Bangarang Birthdays</h4></a>
+    <a class="navbar-brand" href="/"><h4>Bangarang Birthdays</h4></a>
     </div>
     <button class="navbar-toggler ml-auto"  type="button"  data-toggle="collapse" data-target="#navbarResponsive">
     <span class="navbar-toggler-icon float-right"></span>
@@ -110,10 +110,10 @@ input[type='radio']:checked+.checkboxLabel:before {
                         <a class="nav-link white_btn" href="#" onclick="openNav3()">Host A Venue </a> 
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link active white_btn" href="#">Booked Parties </a> 
+                        <a class="nav-link active white_btn" href="/Bookings">Booked Parties </a> 
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link white_btn" href="/">Venues</a> 
+                        <a class="nav-link white_btn" href="/Host">Your venues</a> 
                 </li>
             <li class="nav-item">
                 <a id = "login_btn" class="nav-link white_btn" href="/logout" >Logout</a>    

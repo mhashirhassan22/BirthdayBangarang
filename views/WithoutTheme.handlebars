@@ -64,7 +64,7 @@
     <!--calendar-->
 <div class="container">
     <div class="row justify-content-center">
-     <form action="/Payment" method="POST">
+     <form action="/PaymentWithoutTheme" method="POST">
                 
  
                 <div class="form-row pb-2">
@@ -95,37 +95,11 @@
                         <label for="inputEmail4">Appointment Day</label>
                          
                     </div>
-                     <div class="form-group1 col-6 col-md-6">
-                       <input id='dt' class="form-control1" name="date" />{{#if Flag}}Date Already Booked{{/if}}
-                       </div>
+                       <input id='dt' class='input' name="date" />
                      <div class="entry">
                             <input type="submit" value="PAY & BOOK PARTY" href="#" class="col-10 loginBtn mt-3 ml-4" style=" color :Blue;">
                         </div>
               </form>
-            <div class="col-12 col-lg-6 col-xl-3 col-md-6 ">
-                    <div class="container" >
-                            <div class="row  justify-content-center">
-                              
-                                <div class="Cards"> 
-                                        <div class="card-body">
-                                                <img src="images/ninja.png" alt="">
-                                                {{#if theme}}
-                                                <label class="card-title">{{theme.Name}}</label>
-                                                {{/if}}
-                                                <a href="/selectTheme/{{venue.Name}}" class="col-3 change float-right mt-1">Change</a>
-
-                                            </div>
-                                        {{#if theme}}
-                                    <img class="card-img-top w-100 h-100 mb-5 " src="{{theme.Image}}" alt="">
-                                     {{/if}}
-                                    </div>
-                      
-                                
-                                
-                            </div>
-                        </div>
-
-            </div>
         </div>
     </div>
     

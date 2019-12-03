@@ -15,7 +15,34 @@
     <link rel="stylesheet" href="css/global.css">
     <title>Payment</title>
     <style>
+        input[type='radio'] {
+        display: none;
+      }
       
+      .checkboxLabel:before {
+        content: " ";
+        display: inline-block;
+        position: relative;
+        top: 5px;
+        margin: 0 5px 0 0;
+        width: 17px;
+        height: 17px;
+        border-radius: 11px;
+        border: 2px solid #FF9A00;
+        background-color: transparent;
+      }
+      
+      input[type='radio']:checked+.checkboxLabel:before {
+        position: relative;
+        border: 2px solid #FF9A00;
+        border-radius: 11px;
+        width: 17px;
+        height: 17px;
+        top: 5px;
+        content: " ";
+        display: inline-block;
+        background-color: #FF9A00;
+      }
           </style>
    
 </head>
@@ -134,7 +161,7 @@
 
                 </div>
             </div>
-            <a href="/final" class="PayBook col-lg-12  text-center" style="border-radius: 5px !important;">PAY & BOOK PARTY</a>
+            <a href="/finalwithouttheme" class="PayBook col-lg-12  text-center" style="border-radius: 5px !important;">PAY & BOOK PARTY</a>
 
         </div>
     </div>

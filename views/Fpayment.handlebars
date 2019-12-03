@@ -15,7 +15,34 @@
     <link rel="stylesheet" href="css/global.css">
     <title>Payment</title>
     <style>
+        input[type='radio'] {
+        display: none;
+      }
       
+      .checkboxLabel:before {
+        content: " ";
+        display: inline-block;
+        position: relative;
+        top: 5px;
+        margin: 0 5px 0 0;
+        width: 17px;
+        height: 17px;
+        border-radius: 11px;
+        border: 2px solid #FF9A00;
+        background-color: transparent;
+      }
+      
+      input[type='radio']:checked+.checkboxLabel:before {
+        position: relative;
+        border: 2px solid #FF9A00;
+        border-radius: 11px;
+        width: 17px;
+        height: 17px;
+        top: 5px;
+        content: " ";
+        display: inline-block;
+        background-color: #FF9A00;
+      }
           </style>
    
 </head>
@@ -26,12 +53,12 @@
 <div class="container">
     <div class="row mt-3">
         <div class="col-12 col-lg-4 text-center back">
-        <a href="/" class="backbtn"><i class="fas fa-chevron-left" style="margin-right: 10px;"></i>       Back to Venue</a>
+        <a href="#" class="backbtn"><i class="fas fa-chevron-left" style="margin-right: 10px;"></i>       Back to Venue</a>
         </div>
         <div class="col-12 col-lg-5 venue ">
             <p class="title" style="font-size: 16px ; margin-left: 30px mt-1">PAY & BOOK PARTY</p>
             <h5>{{venue.Name}}</h5>
-            <p class="subTitle">{{venue.Address}}<span class="seprator"> | </span>  {{user.Phone}} <span  class="seprator"> | </span><span class="link">{{user.Website}}</span></p>
+            <p class="subTitle">{{venue.Address}}<span class="seprator">
         </div>
         <div class="col-12 col-lg-3 text-center back1">
             <a href="#" class="FAQbtn" ><i class="fas fa-question-circle"  style="margin-right: 10px"></i>      FAQ</a>
@@ -39,34 +66,6 @@
     </div>
     <hr>
 </div>
-    <!--body-->
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-12 col-lg-12 col-md-12 col-xl-8" >
-            <!--Venue Details Date-->
-            <div class="row justify-content-center">
-                <div class="col-4 col-lg-3" >
-                <p class="paymentTitle">Venue</p>
-                <div class="rectangle">
-                    <h5>{{venue.Name}}</h5>
-                    <a href="/">Review</a> / <a href="#">change</a>
-                </div>
-                </div>
-                <div class="col-4 col-lg-3">
-                    <p class="paymentTitle">Details</p>
-                    <div class="rectangle">
-                        <h5>All Filled <i class="ml-2 fas fa-check"></i></h5>
-                        <a href="/selectTheme/{{venue.Name}}">Review</a> / <a href="#">change</a>
-                    </div>
-                </div>
-                <div class="col-4 col-lg-3" >
-                    <p class="paymentTitle">Date</p>
-                    <div class="rectangle">
-                        <h5>May 23, 2019</h5>
-                        <a href="/themeSelected/{{Booking.Theme}}">Review</a> / <a href="#">change</a>
-                    </div>
-                 </div>
-            </div>
             <!--payment methods-->
             <div class="row justify-content-center mt-3">
                 <div class="col-12 col-lg-9 col-xl-9" >
@@ -121,20 +120,18 @@
             <div class="myrectangle ">
                 <div class="body">
                     <div class="row">
-                        <p class="col" style="font-size: 12px">1 Day Rental</p>
-                        <p class="col float-right" style="font-size: 12px">{{Booking.Price}}</p>
                     </div>
                     <hr style="margin-top: 0px">
                     <div class="row">
                         <p class="col" style="font-size: 12px">Final Price</p>
-                        <p class="col final" style="font-size: 12px">{{Booking.Price}}</p>
+                        <p class="col final" style="font-size: 12px">$15</p>
                     </div>
 
                         
 
                 </div>
             </div>
-            <a href="/final" class="PayBook col-lg-12  text-center" style="border-radius: 5px !important;">PAY & BOOK PARTY</a>
+            <a href="/Featured" class="PayBook col-lg-12  text-center" style="border-radius: 5px !important;">PAY & BOOK PARTY</a>
 
         </div>
     </div>

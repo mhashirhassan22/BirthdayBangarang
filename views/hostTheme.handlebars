@@ -26,6 +26,54 @@
     <!--form-->
 <div class="container">
     <div class="row  justify-content-center mb-5">
+        <div class="col-11 col-xl-3 col-lg-5 col-md-5  themeDiv" >
+            <div class="text-center mb-2">
+                <img src="images/ninja.png" alt="">
+                <label class="text-center" style="color: #28AD00">{{venue.Name}}</label>
+            </div>
+            <img src="{{this.Image}}" class="w-100" alt="">
+            <div class="row mt-2">
+                <div class="col-6">
+                    <p class="themeTitle">${{venue.Price}} / Day</p>
+                    <p class="themeBody">Price</p>
+                </div>
+            </div>
+            <hr class="rowhr">
+            <div class="row">
+                <div class="col-6">
+                    <p class="themeTitle">{{venue.Featured}} </p>
+                    <p class="themeBody">Featured Status</p>
+                </div>
+            </div>
+            <hr class="rowhr">
+            <div class="row">
+                <div class="col-6">
+                    <p class="themeTitle">{{venue.Expire}} </p>
+                    <p class="themeBody">Expire Date</p>
+                </div>
+            </div>
+            <hr class="rowhr">
+            <div class="row">
+                <div class="col-6">
+                    <p class="themeTitle">{{venue.City}}</p>
+                    <p class="themeBody">City</p>
+                </div>
+            </div>
+            <hr class="rowhr">
+            <div class="row">
+                <div class="col-12">
+                    <p class="themeTitle text-center">{{venue.Address}}</p>
+                    <p class="themeBody text-center">Address</p>
+                </div>
+            </div>
+            {{#if Flag}}
+            <div class="row justify-content-center">
+                <div class="col-12 text-center mt-3">
+                <a href="/Fpayment" class=" DeleteTheme">Get Featured</a>
+                </div>
+            </div>
+            {{/if}}
+        </div>
         {{#each  Themes}}
         <div class="col-11 col-xl-3 col-lg-5 col-md-5  themeDiv" >
             <div class="text-center mb-2">
@@ -78,6 +126,7 @@
             </div>
         </div>
         {{/each}}
+        
         <!--add btn section-->
         <div class="col-4 col-lg-5 col-xl-3 col-md-5  ml-4 themeDiv2 text-center " >
             <a href="/Themes/{{venue.Owner}}" class=" align-self-center"><i class="fas fa-plus-circle align-self-center"></i></a>

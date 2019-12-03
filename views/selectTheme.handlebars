@@ -16,7 +16,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 col-lg-4 col-xl-4 col-md-4 text-center back">
-        <a href="home.html" class="backbtn"> <i class="fas fa-chevron-left" style="margin-right: 10px;">  </i>         Back Home</a>
+        <a href="/" class="backbtn"> <i class="fas fa-chevron-left" style="margin-right: 10px;">  </i>         Back Home</a>
         </div>
         <div class="col-12 col-lg-5 col-xl-5 col-md-5 venue mt-3 ">
             <p class="title" style="font-size: 13px; margin-bottom: 0px;">VENUE</p>
@@ -27,6 +27,9 @@
     <hr style="width: 79% !important">
 </div>
 
+
+
+{{#if Themes}}
 <div class="container" >
     <div class="row h-100 justify-content-center">
         <div class="col-2 col-lg-2 my-auto selectThemep">
@@ -180,7 +183,17 @@
             </div>
             
         </div>
-
+{{/if}}
+ <div class="container mt-4">
+        <div class="row justify-content-center mb-5 ml-5">
+    
+            <div class="col-5 col-lg-3 ml-3">
+  
+                  <a href="/withoutTheme" class="themebtn pt-2 pb-2 btn-block text-center ml-5">Checkout Without Theme</a>
+               
+            </div>
+            </div>
+        </div>
     <script src="./jquery/jquery-3.4.0.min.js"></script>
     <script src="./js/popper.min.js"></script> 
     <script src="./bootstrap-4/js/bootstrap.min.js"></script>

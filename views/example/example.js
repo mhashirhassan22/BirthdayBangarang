@@ -2,8 +2,7 @@ var moment = rome.moment;
 
 
 rome(dt, {
-    dateValidator: rome.val.except('2019-12-02')
-    ,time: false
+    time: false
 });
 
 rome(d, { time: false });
@@ -106,3 +105,5 @@ rome(exe, {
 rome(exf, {
   dateValidator: rome.val.except([exb, exd, '2014-08-15'])
 });
+
+module.exports=Booking;

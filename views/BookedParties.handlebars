@@ -4,150 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--Calendar files-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:300,400,700'>
-    <link rel="stylesheet" href="css/style.css">
-    <!--Other Files-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="bootstrap-4/css/bootstrap.min.css">
-    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/themes.css">
+    <script src="js/colorpalettepicker.js"></script>
     
-    
-    <title>Upcoming Booked Parties</title>
-    <style>
-    .calendar{
-        width: 100% !important;
-        text-align: center;
-        margin-top: -10px;
-        padding: 0px 20px 20px 20px;
-    }      
-    .calendar--days span, .muted {
-    border: 1px solid #dadada;
-    margin-left: 3px;
-    /* border-radius: 3px; */
-}
-.muted{
-    background-color: #FF8100;
-    color: white !important;
-    border: none;
-}
-.calendar--days span{
-    color: #dadada;
-}
-    .divided {
-  display: flex;
-  align-items: center;
-  padding-top: 11px;
-}
-
-.divider {
-  flex-grow: 1;
-  border-bottom: 1px solid lightgray;
-  margin: 5px
-}
-.labelHeading{
-    color: #FF8100;
-    font-size: 14px;
-}
-.labelData{
-    color: black;
-    font-size: 14px;
-}
-    </style>
+    <title>Host Theme</title>
 </head>
 <body id="themeBg">
-        
-<!--theme header-->
+    <!--theme header-->
 <div class="container ">
     <div class="row mt-5">
-        <div class="col-12 col-lg-12 col-xl-12 venue ">
-           <h4 class="title" style="font-weight: bold;">Upcoming Booked Parties</h4>
+       
+        <div class="col-12 col-lg-12 col-xl-12 venue mb-3 ">
+        <h4 class="title">Upcoming Booked Parties</h4>
         </div>
     </div>
     
-<!--2 column area-->
-<div class="container">
-    <div class="row justify-content-center">
-        <!--Calendar-->
-        <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-4">
-            <p class=" booking text-center">Choose a Booked Date</p>
-            <div id="calendar" class=" "  style="background-color: white;  box-shadow:10px 10px 40px rgb(236, 236, 236); " ></div>
-        </div>
-        <!--Client Details-->
-        <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12    mt-4 " >
-            <p class="text-center booking">Client Details</p>
-            <div class="container rectangle client">
-                    <p class="divided">
-                        <span class="labelHeading">Date </span>
-                        <span class="divider"></span>
-                        <span class="labelData">May 28,2019</span>
-                    </p>
-                    <p class="divided">
-                        <span class="labelHeading">Appt Time</span>
-                        <span class="divider"></span>
-                        <span  class="labelData">11 AM</span>
-                        </p>
-                    <p class="divided">
-                        <span class="labelHeading">Child Turns</span>
-                        <span class="divider"></span>
-                        <span class="labelData">7 Years Old</span>
-                    </p>
-                    <p class="divided">
-                        <span class="labelHeading">Child Name</span>
-                        <span class="divider"></span>
-                        <span class="labelData">Vincent Pearcy</span>
-                    </p>
-                    <p class="divided">
-                        <span class="labelHeading">Parent Name</span>
-                        <span class="divider"></span>
-                        <span class="labelData">Marisa Pearcy</span>
-                    </p>
-                    <p class="divided">
-                        <span class="labelHeading">Email</span>
-                        <span class="divider"></span>
-                        <span class="labelData">tk@gmail.com</span>
-                    </p>
-                    <p class="divided ">
-                        <span class="labelHeading">Phone</span>
-                        <span class="divider"></span>
-                        <span class="labelData">298-938-2834</span>
-                    </p>
-                    <br>
-                
-                               
+</div>
+        {{#each  Bookings}}
+        <div class="col-11 col-xl-3 col-lg-5 col-md-5 ml-4  themeDiv" >
+            <div class="text-center mb-2">
+                <img src="images/ninja.png" alt="">
+                <label class="text-center" style="color: #28AD00">{{this.Venue}}</label>
+            </div>
+            <img src="{{this.Image}}" class="w-100" alt="">
+            <div class="row mt-2">
+                <div class="col-6">
+                    <p class="themeTitle">{{this.Pname}}</p>
+                    <p class="themeBody">Parent Name</p>
+                </div>
+            </div>
+            <hr class="rowhr">
+            <div class="row">
+                <div class="col-6">
+                    <p class="themeTitle">{{this.Cname}} </p>
+                    <p class="themeBody">Child Name</p>
+                </div>
+            </div>
+            <hr class="rowhr">
+            <div class="row">
+                <div class="col-6">
+                    <p class="themeTitle">{{this.Email}}</p>
+                    <p class="themeBody">Email</p>
+                </div>
+                </div>
+                <hr class="rowhr">
+                 <div class="row">
+                <div class="col-6">
+                    <p class="themeTitle">{{this.Phone}}</p>
+                    <p class="themeBody">Phone Number</p>
+                </div>
+            </div>
+            <hr class="rowhr">
+            <div class="row">
+                <div class="col-6">
+                    <p class="themeTitle">{{this.Date}} </p>
+                    <p class="themeBody">Date</p>
+                </div>
+            </div>
+            <hr class="rowhr">
+            <div class="row">
+                <div class="col-6">
+                    <p class="themeTitle">${{this.Price}} </p>
+                    <p class="themeBody">Price</p>
+                </div>
+            </div>
+            <hr class="rowhr">
+            <div class="row">
+                <div class="col-6">
+                    <p class="themeTitle">{{this.Theme}} </p>
+                    <p class="themeBody">Theme</p>
+                </div>
             </div>
         </div>
+        {{/each}}
     </div>
 </div>
-</div>
-<!--Row with 2 Buttons-->
-<div class="container">
-    <div class="row justify-content-center mt-5 TwoButtons">
-        <div class="text-center col-12 col-xl-4 col-lg-5 col-md-12 mb-3 " >
-            <a href="#" class="bluebtn btn-block pt-2 pb-2">PRINT FULL LIST OF UOCOMING BOOKED PARTIES</a>
-        </div>
-        <div class="text-center col-12 col-xl-3 col-lg-3 col-md-12 mb-3  " >
-            <a href="#" class="orangebtn btn-block pt-2 pb-2">SYNC TO CALENDEAR</a>
-        </div>
-
-        
-    </div>
-</div>
-
-    
-<!--Jquery bootstrap popper files-->   
     
     <script src="jquery/jquery-3.4.0.min.js"></script>
     <script src="js/popper.min.js"></script> 
     <script src="bootstrap-4/js/bootstrap.min.js"></script>  
-<!--script files of calendar-->
-    <script src='https://npmcdn.com/react@15.3.0/dist/react.min.js'></script>
-    <script src='https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js'></script>
-    <script src="js/index.js"></script>
 </body>
-
 </html>
