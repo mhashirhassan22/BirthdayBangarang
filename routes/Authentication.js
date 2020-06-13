@@ -53,11 +53,17 @@ router.post('/signup',(req,res)=>{
         Phone: req.body.Phone,
         Email: req.body.Email,
         Website: req.body.Website
-    });
+    })
+	    auth = firebase.auth();
+        firebase.auth().signInWithEmailAndPassword(req.body.Email,req.body.Passowrd).then((cred)=>{
+            res.redirect('/changelayouts/'+req.body.email)
+       }).catch(err=>{
+            console.log(err);
+       });
     }).catch(err=>{
      console.log(err);
+     res.redirect('/');
     });
-    res.redirect('/');
 
 });
 

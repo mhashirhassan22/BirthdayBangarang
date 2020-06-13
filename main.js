@@ -529,11 +529,12 @@ app.get('/Themes/:name', (req, res) => {
   }
   else {
       //Issue with For Loop So Hard Coding Due To Time Constraint
+
       let venueRef = db.collection('themes');
       let Allvenueref = venueRef.get()
       .then(snapshot => {
         snapshot.forEach(doc => {
-
+          
          if(venue.Themes.length ==1)
          {
           if (doc.data().Name.includes( venue.Themes[0])) {

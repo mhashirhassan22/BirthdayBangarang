@@ -40,6 +40,17 @@ input[type='radio']:checked+.checkboxLabel:before {
   display: inline-block;
   background-color: #FF9A00;
 }
+.mypass{
+    display: inline-block;
+    font-size: 14px;
+    margin: 5px;
+    width: 85%;
+    border: 1px solid #FF9A00;
+    border-radius: 50px !important;
+    padding: 5px 40px !important;
+
+
+}
     </style>
 </head>
 <body  >
@@ -57,7 +68,7 @@ input[type='radio']:checked+.checkboxLabel:before {
                     <!--email-->
                 <input  type="text" id="login" class="fadeIn second inputPic1" name="email" placeholder="Email" required="">
                 <!--Password-->
-                <input  type="text" id="password" class="fadeIn third inputPic2" name="password" placeholder="Password" required="">
+                <input class="mypass fadeIn second inputPic2" type="password" id="password" name="password" placeholder="Password" required="">
             
                 <!--Sign Up sign IN buttons-->
                 <div class="row justify-content-center">
@@ -77,11 +88,15 @@ input[type='radio']:checked+.checkboxLabel:before {
         <div id="formContent">
                 <div class="fadeIn first mt-4">
             <a href="#" class="close-btn" onclick="closeNav4()">&times;</a>
-                    <h4>Contact US</h4>
+                    <h4>Contact Bangarang Team</h4>
                 </div>
-                <input readonly type="text" id="cmail" class="nav-link white_btn" name="infomail" placeholder="abc@gmail.com" required="">
-
-                <input  readonly type="text" id="cno" class="nav-link white_btn" name="infocontact" placeholder="whatsapp" required="">
+            <input readonly type="text"placeholder="Email:  abc@gmail.com">
+                <input  readonly type="text"placeholder="Phone#  +92-322-8080110">
+                <p>OR Click Below</p>
+                   <a href="mailto:webmaster@example.com"><img src="images/mail.svg" width="110" height="90"></a>&nbsp;
+                <a href="https://api.whatsapp.com/send?phone=923228080110&text=&source=&data="><img src="images/whatsapp.svg" width="105" height="85"></a>
+                <div id="just-line-break"></div>
+                <br/>
                 </div>
             </form> 
         </div>
@@ -101,8 +116,8 @@ input[type='radio']:checked+.checkboxLabel:before {
                     <div class="col-12 col-xl-6 col-lg-6 " style="padding-left: 0px !important ; padding-right: 0px !important">
                         <p>Owner Info </p>
                         <input  type="text" id="login" class="fadeIn second " name="Name" placeholder="Full Name" required="">
-                        <input  type="text" id="login" class="fadeIn second " name="Passowrd" placeholder="Passowrd" required="">
-                        <input  type="text" id="login" class="fadeIn second " name="CPassword" placeholder="Confirm Password" required="">
+                        <input  type="password" id="login" class="mypass fadeIn second inputPic2" name="Passowrd" placeholder="Passowrd" pattern=".{6,}" required="">
+                        <input  type="password" id="login" class="mypass fadeIn second inputPic2" name="CPassword" placeholder="Confirm Password"  pattern=".{6,}" required="">
                         <input  type="text" id="login" class="fadeIn second " name="PaypalID" placeholder="Paypal ID" required="">
                         <input  type="text" id="login" class="fadeIn second " name="BankRouting" placeholder="Bank Routing #" required="">
                         <input  type="text" id="login" class="fadeIn second " name="CheckingAcct" placeholder="Checking Acct # " required="">

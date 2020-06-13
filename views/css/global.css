@@ -6,6 +6,14 @@
     font-family:AvenirReg;
     src: url(AvenirNextLTPro-Regular.otf);
 }
+
+#just-line-break {
+    white-space: pre-line;
+  }
+  
+  #line-break-and-tab {
+    white-space: pre-wrap;
+  }
 /*navbar*/
 .navbar{
     padding: .8rem;

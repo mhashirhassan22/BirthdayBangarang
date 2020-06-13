@@ -38,6 +38,16 @@
            
         </style>
 
+    <script>
+       function myfunc(){
+             document.getElementById("dt").min = new Date().getFullYear() + "-" +  parseInt(new Date().getMonth() + 1 ) + "-" + new Date().getDate();
+            // alert( document.getElementById("dt").value);
+             if(document.getElementById("dt").min>document.getElementById("dt").value){
+                 alert("You must choose present or future date");
+                 return false;
+             }
+        }
+    </script>
    
 </head>
 <body id="themeBg" >
@@ -64,18 +74,18 @@
     <!--calendar-->
 <div class="container">
     <div class="row justify-content-center">
-     <form action="/PaymentWithoutTheme" method="POST">
+     <form action="/PaymentWithoutTheme" onsubmit="return myfunc()" method="POST">
                 
  
                 <div class="form-row pb-2">
                     <div class="form-group1 col-md-6 col-6">
                         <label for="inputEmail4">Email</label>
-                        <input type="text" class="form-control1 col-lg-12" id="inputEmail4" name="email" placeholder="Enter Email">
+                        <input type="text" class="form-control1 col-lg-12" id="inputEmail4" name="email" placeholder="Enter Email" required>
                     </div>
 
                     <div class="form-group1 col-md-6 col-6">
                         <label for="inputEmail4">Parent Name</label>
-                         <input type="text" class="form-control1 col-lg-12" id="inputEmail4" name="pname" placeholder="Parent Name">
+                         <input type="text" class="form-control1 col-lg-12" id="inputEmail4" name="pname" placeholder="Parent Name" required>
                  
                     </div>
                 </div>
@@ -83,12 +93,12 @@
                     <div class="form-row">
                         <div class="form-group1 col-6 col-md-6">
                         <label for="inputEmail4">Child Name</label>
-                        <input type="text" class="form-control1 col-lg-12" id="inputEmail4" name="cname" placeholder="Child Name">
+                        <input type="text" class="form-control1 col-lg-12" id="inputEmail4" name="cname" placeholder="Child Name" required>
                         </div>
 
                         <div class="form-group1 col-6 col-md-6">
                         <label for="inputEmail4">Phone</label>
-                         <input type="text" class="form-control1 col-lg-12" id="inputEmail4" name="phone"  placeholder="123-345677">
+                         <input type="text" class="form-control1 col-lg-12" id="inputEmail4" name="phone"  placeholder="123-345677" required>
                         </div>
                     </div>
                     <div class="form-group1 ">
@@ -97,7 +107,7 @@
                     </div>
                        <input id='dt' class='input' name="date" />
                      <div class="entry">
-                            <input type="submit" value="PAY & BOOK PARTY" href="#" class="col-10 loginBtn mt-3 ml-4" style=" color :Blue;">
+                            <input type="submit" value="PAY & BOOK PARTY" href="#" class="col-10 loginBtn mt-3 ml-4" style=" color :Blue;" required>
                         </div>
               </form>
         </div>
